@@ -3,12 +3,17 @@
     Copyright (c) 2019 by SilentByte <https://www.silentbyte.com/>
 -->
 
+<!--suppress HtmlUnknownAnchorTarget -->
 <template>
-    <div id="pagetop">
+    <div id="home">
         <!-- Navigation -->
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+        <nav id="mainNav"
+             class="navbar navbar-expand-lg navbar-light fixed-top py-3">
             <div class="container">
-                <a class="navbar-brand js-scroll-trigger" href="#page-top">Start Bootstrap</a>
+                <a class="navbar-brand js-scroll-trigger"
+                   href="#home">
+                    Selfie2Anime
+                </a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
                         data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
                         aria-label="Toggle navigation">
@@ -17,10 +22,10 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto my-2 my-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="#about">About</a>
+                            <a class="nav-link js-scroll-trigger" href="#home">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="#services">Services</a>
+                            <a class="nav-link js-scroll-trigger" href="#about">About</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
@@ -53,54 +58,19 @@
         </header>
 
         <!-- About Section -->
-        <section class="page-section bg-primary" id="about">
+        <section id="about" class="page-section">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8 text-center">
-                        <h2 class="text-white mt-0">We've got what you need!</h2>
-                        <hr class="divider light my-4">
-                        <p class="text-white-50 mb-4">Start Bootstrap has everything you need to get your new website up
-                            and running in no time! Choose one of our open source, free to download, and easy to use
-                            themes! No strings attached!</p>
-                        <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Get Started!</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Services Section -->
-        <section class="page-section" id="services">
-            <div class="container">
-                <h2 class="text-center mt-0">At Your Service</h2>
-                <hr class="divider my-4">
-                <div class="row">
-                    <div class="col-lg-3 col-md-6 text-center">
-                        <div class="mt-5">
-                            <i class="fas fa-4x fa-gem text-primary mb-4"></i>
-                            <h3 class="h4 mb-2">Sturdy Themes</h3>
-                            <p class="text-muted mb-0">Our themes are updated regularly to keep them bug free!</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 text-center">
-                        <div class="mt-5">
-                            <i class="fas fa-4x fa-laptop-code text-primary mb-4"></i>
-                            <h3 class="h4 mb-2">Up to Date</h3>
-                            <p class="text-muted mb-0">All dependencies are kept current to keep things fresh.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 text-center">
-                        <div class="mt-5">
-                            <i class="fas fa-4x fa-globe text-primary mb-4"></i>
-                            <h3 class="h4 mb-2">Ready to Publish</h3>
-                            <p class="text-muted mb-0">You can use this design as is, or you can make changes!</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 text-center">
-                        <div class="mt-5">
-                            <i class="fas fa-4x fa-heart text-primary mb-4"></i>
-                            <h3 class="h4 mb-2">Made with Love</h3>
-                            <p class="text-muted mb-0">Is it really open source if it's not made with love?</p>
-                        </div>
+                        <h2 class="mt-0" style="font-size: 3em">
+                            What do <span class="text-primary font-weight-bold">YOU</span>
+                            look like in <span class="text-primary font-weight-bold">anime</span>?
+                        </h2>
+                        <a href="#home"
+                           class="mt-5 btn btn-primary px-5 btn-xl js-scroll-trigger"
+                           style="font-size: 2rem">
+                            Give it a try!
+                        </a>
                     </div>
                 </div>
             </div>
@@ -125,25 +95,35 @@
         </section>
 
         <!-- Contact Section -->
-        <section class="page-section" id="contact">
+        <section id="contact" class="page-section">
             <div class="container">
-                <div class="row justify-content-center">
+                <div class="row justify-content-center mb-4">
                     <div class="col-lg-8 text-center">
-                        <h2 class="mt-0">Let's Get In Touch!</h2>
+                        <h2 class="mt-0">Want to get in touch?</h2>
                         <hr class="divider my-4">
-                        <p class="text-muted mb-5">Ready to start your next project with us? Give us a call or send us
-                            an email and we will get back to you as soon as possible!</p>
+                        <p class="text-muted mb-5">
+                            Follow us on Twitter and Github to find out what other
+                            projects we're working on or drop us an email if you
+                            have any questions!
+                        </p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
-                        <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
-                        <div>+1 (202) 555-0149</div>
+                        <i style="color: #38a1f3" class="fa fa-twitter fa-5x mb-3"></i>
+                        <a class="d-block" href="https://twitter.com/RicoBeti">@RicoBeti</a>
+                        <a class="d-block" href="https://twitter.com/nathangloverAUS">@nathangloverAUS</a>
                     </div>
-                    <div class="col-lg-4 mr-auto text-center">
-                        <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
-                        <!-- Make sure to change the email address in anchor text AND the link below! -->
-                        <a class="d-block" href="mailto:contact@yourwebsite.com">contact@yourwebsite.com</a>
+
+                    <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
+                        <i style="color: #211f1f" class="fa fa-github fa-5x mb-3"></i>
+                        <a class="d-block" href="https://github.com/SilentByte">@SilentByte</a>
+                        <a class="d-block" href="https://github.com/t04glovern">@t04glovern</a>
+                    </div>
+
+                    <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
+                        <i style="color: #b23121" class="fa fa-envelope fa-5x mb-3"></i>
+                        <a class="d-block" href="mailto:info@selfie2anime.com">info@selfie2anime.com</a>
                     </div>
                 </div>
             </div>
@@ -180,7 +160,11 @@
     }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+    .nav-item, .page-section h2 {
+        text-transform: uppercase;
+    }
+
     #portfolio .container-fluid {
         max-width: 12 * 256px;
     }

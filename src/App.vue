@@ -10,5 +10,8 @@
 </template>
 
 <style lang="scss">
-    //
+    body {
+        font-size: 16pt;
+        line-height: 1.75em;
+    }
 </style>
