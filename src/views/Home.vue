@@ -107,96 +107,20 @@
         </section>
 
         <!-- Portfolio Section -->
-        <section id="portfolio">
+        <section id="portfolio" class="bg-dark">
             <div class="container-fluid p-0">
                 <div class="row no-gutters">
-                    <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="img/portfolio/fullsize/1.jpg">
-                            <img class="img-fluid" src="img/portfolio/thumbnails/1.jpg" alt="">
+                    <div v-for="i in 96"
+                         class="col-lg-1 col-md-2 col-sm-3 col-4">
+                        <a class="portfolio-box" :href="`img/portfolio/original/${i}.jpg`">
+                            <img class="img-fluid mx-auto d-block"
+                                 :src="`img/portfolio/gan/${i}.jpg`" alt="">
                             <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="img/portfolio/fullsize/2.jpg">
-                            <img class="img-fluid" src="img/portfolio/thumbnails/2.jpg" alt="">
-                            <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="img/portfolio/fullsize/3.jpg">
-                            <img class="img-fluid" src="img/portfolio/thumbnails/3.jpg" alt="">
-                            <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="img/portfolio/fullsize/4.jpg">
-                            <img class="img-fluid" src="img/portfolio/thumbnails/4.jpg" alt="">
-                            <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="img/portfolio/fullsize/5.jpg">
-                            <img class="img-fluid" src="img/portfolio/thumbnails/5.jpg" alt="">
-                            <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="img/portfolio/fullsize/6.jpg">
-                            <img class="img-fluid" src="img/portfolio/thumbnails/6.jpg" alt="">
-                            <div class="portfolio-box-caption p-3">
-                                <div class="project-category text-white-50">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
+                                <img class="img-fluid" :src="`img/portfolio/original/${i}.jpg`" alt="">
                             </div>
                         </a>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- Call to Action Section -->
-        <section class="page-section bg-dark text-white">
-            <div class="container text-center">
-                <h2 class="mb-4">Free Download at Start Bootstrap!</h2>
-                <a class="btn btn-light btn-xl" href="https://startbootstrap.com/themes/creative/">Download Now!</a>
             </div>
         </section>
 
@@ -228,12 +152,18 @@
         <!-- Footer -->
         <footer class="bg-light py-5">
             <div class="container">
-                <div class="small text-center text-muted">Copyright &copy; 2019 - Start Bootstrap</div>
+                <div class="small text-center text-muted">
+                    Copyright &copy; 2019 by
+                    <a href="https://twitter.com/RicoBeti">Rico Beti</a>
+                    &amp;
+                    <a href="https://twitter.com/nathangloverAUS">Nathan Glover</a>
+                </div>
             </div>
         </footer>
     </div>
 </template>
 
+<!--suppress JSMethodCanBeStatic, JSUnusedGlobalSymbols, TypeScriptCheckImport -->
 <script lang="ts">
     import {
         Component,
@@ -249,3 +179,9 @@
         }
     }
 </script>
+
+<style lang="scss">
+    #portfolio .container-fluid {
+        max-width: 12 * 256px;
+    }
+</style>
