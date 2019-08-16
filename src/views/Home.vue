@@ -168,7 +168,7 @@
     }
 
     .portfolio-box-caption {
-        -webkit-transition: opacity 0.5s ease !important;
-        transition: opacity 0.5s ease !important;;
+        -webkit-transition: opacity 0.75s ease !important;
+        transition: opacity 0.75s ease !important;;
     }
 </style>
