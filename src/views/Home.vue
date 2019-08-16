@@ -166,4 +166,9 @@
     #portfolio .container-fluid {
         max-width: 12 * 256px;
     }
+
+    .portfolio-box-caption {
+        -webkit-transition: opacity 0.5s ease !important;
+        transition: opacity 0.5s ease !important;;
+    }
 </style>
