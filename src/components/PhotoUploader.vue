@@ -3,6 +3,7 @@
     Copyright (c) 2019 by SilentByte <https://www.silentbyte.com/>
 -->
 
+<!--suppress HtmlFormInputWithoutLabel -->
 <template>
     <div class="photo-uploader shadow-sm">
         <div class="row">
@@ -34,6 +35,20 @@
                             class="btn btn-primary btn-lg p-3 text-uppercase"
                             @click="onPhotoCropped">
                         Turn me into anime!
+                    </button>
+                </div>
+            </div>
+            <div v-show="step === 'email'" class="email-container col-sm">
+                <div class="text-center" style="margin: 50px">
+                    <input type="text"
+                           class="form-control"
+                           placeholder="E-Mail"
+                           v-model="email" />
+
+                    <button type="button"
+                            class="btn btn-primary btn-lg mt-3 p-3 text-uppercase"
+                            @click="onUploadPhoto">
+                        SEND (DEBUG)
                     </button>
                 </div>
             </div>
@@ -69,6 +84,7 @@
     export default class PhotoUploader extends Vue {
         step: "drop" | "crop" | "email" | "done" = "drop";
         photoDataUrl = "";
+        email = "";
 
         async onPhotoSelected(e: Event) {
             const file: File = (e.target as any).files[0];
@@ -78,6 +94,12 @@
 
         onPhotoCropped() {
             this.step = "email";
+            (this.$refs.cropper as any).getCropCoordinates();
+        }
+
+        onUploadPhoto() {
+            // console.log(this.email);
+            // console.log((this.$refs.cropper as any).getCropCoordinates());
         }
     }
 </script>
