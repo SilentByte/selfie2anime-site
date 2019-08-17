@@ -5,7 +5,7 @@
 
 <!--suppress HtmlFormInputWithoutLabel -->
 <template>
-    <div class="photo-uploader shadow-sm">
+    <div ref="photo-uploader" class="photo-uploader shadow-sm">
         <div class="row">
             <div v-show="step === 'drop'" class="drop-container col-sm">
                 <div class="drop-container-inner">
@@ -87,6 +87,11 @@
         cropCoordinates: { x: number, y: number, width: number; height: number } = {x: 0, y: 0, width: 0, height: 0};
         email = "";
 
+        scrollToTop() {
+            const element = this.$refs["photo-uploader"] as HTMLElement;
+            window.scrollTo(0, element.offsetTop);
+        }
+
         async onPhotoSelected(e: Event) {
             const file: File = (e.target as any).files[0];
             this.photoDataUrl = await fileToDataUrl(file);
@@ -96,6 +101,7 @@
         onPhotoCropped() {
             this.cropCoordinates = (this.$refs.cropper as any).getCropCoordinates();
             this.step = "email";
+            this.$nextTick(() => this.scrollToTop());
         }
 
         onUploadPhoto() {

@@ -5,7 +5,7 @@
 
 <!--suppress HtmlUnknownTarget -->
 <template>
-    <div class="col">
+    <div class="col container">
         <img ref="image"
              class="img-fluid"
              alt="Crop Image"
@@ -60,6 +60,8 @@
     }
 </script>
 
-<style lang="scss" scoped>
-    //
+<style lang="scss">
+    .container .croppr-container .croppr img {
+        max-height: 600px;
+    }
 </style>
