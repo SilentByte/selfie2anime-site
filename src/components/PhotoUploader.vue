@@ -28,7 +28,7 @@
             </div>
             <div v-show="step === 'crop'" class="crop-container col-sm">
                 <div class="crop-container-inner text-center">
-                    <div class="mt-5 mb-4" style="font-size: 1.2em">
+                    <div class="mt-5 mb-5" style="font-size: 1.2em">
                         Now please <span class="text-primary font-weight-bold">crop</span>
                         the photo to your <span class="text-primary font-weight-bold">face</span> only!
                     </div>
@@ -36,14 +36,14 @@
                              class="mb-3"
                              :photoUrl="photoDataUrl" />
                     <button type="button"
-                            class="btn btn-primary btn-lg p-3 text-uppercase"
+                            class="btn btn-primary btn-lg p-3 mb-3 text-uppercase"
                             @click="onPhotoCropped">
                         Turn me into anime!
                     </button>
                 </div>
             </div>
             <div v-show="step === 'email'" class="email-container col-sm">
-                <div style="margin: 50px">
+                <div style="margin: 80px 50px">
                     <form>
                         <div class="form-row mb-4 align-items-center justify-content-center">
                             <div class="col col-10 text-center">
@@ -57,7 +57,7 @@
                         </div>
                         <div class="form-row align-items-center justify-content-center">
                             <div class="col col-10">
-                                <div class="input-group mb-2">
+                                <div class="input-group mt-3 mb-2">
                                     <input type="email"
                                            class="form-control form-control-lg"
                                            placeholder="Enter your e-mail address..."
@@ -149,7 +149,7 @@
 
 <style lang="scss" scoped>
     $border-radius: 20px;
-    $background-color: rgba(255, 255, 255, 0.85);
+    $background-color: rgba(255, 255, 255, 0.9);
 
     .photo-uploader {
         background: $background-color;
@@ -172,10 +172,10 @@
     .photo-input + label {
         width: 100%;
         height: 100%;
-        padding: 120px 0;
+        padding: 100px 0;
         font-size: 1.25em;
         text-align: center;
-        border: 2px dotted #f4623a;
+        border: 2px dotted #f06292;
         border-radius: $border-radius;
         cursor: pointer;
     }
@@ -186,7 +186,7 @@
     }
 
     .photo-input:focus + label {
-        border: 2px solid #f4623a;
+        border: 2px solid #f06292;
     }
 
     .crop-container {

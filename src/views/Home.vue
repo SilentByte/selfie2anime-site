@@ -10,8 +10,7 @@
         <nav id="mainNav"
              class="navbar navbar-expand-lg navbar-light fixed-top py-3">
             <div class="container">
-                <a class="navbar-brand js-scroll-trigger"
-                   href="#home">
+                <a href="#home" class="navbar-brand js-scroll-trigger">
                     Selfie2Anime
                 </a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
@@ -22,16 +21,16 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto my-2 my-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="#home">Home</a>
+                            <a href="#home" class="nav-link js-scroll-trigger">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="#about">About</a>
+                            <a href="#about" class="nav-link js-scroll-trigger">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
+                            <a href="#portfolio" class="nav-link js-scroll-trigger">Portfolio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+                            <a href="#contact" class="nav-link js-scroll-trigger">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -114,7 +113,7 @@
                     </div>
 
                     <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
-                        <i style="color: #b23121" class="fa fa-envelope fa-5x mb-3"></i>
+                        <i style="color: #f06292" class="fa fa-envelope fa-5x mb-3"></i>
                         <a class="d-block" href="mailto:info@selfie2anime.com">info@selfie2anime.com</a>
                     </div>
                 </div>
@@ -161,6 +160,26 @@
 <style lang="scss" scoped>
     .nav-item, .page-section h2 {
         text-transform: uppercase;
+    }
+
+    .nav-item .nav-link {
+        font-size: 1.2rem !important;
+    }
+
+    .navbar-brand {
+        font-size: 1.7rem !important;
+    }
+
+    #mainNav {
+        background: rgba(30, 30, 30, 0.8);
+    }
+
+    #mainNav.navbar-scrolled {
+        background: #fff;
+
+        .navbar-brand {
+            color: #f06292;
+        }
     }
 
     #portfolio .container-fluid {
