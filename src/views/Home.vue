@@ -113,7 +113,8 @@
                 </div>
 
                 <div class="my-5 text-muted" style="line-height: 2em">
-                    The GAN itself is <a href="https://github.com/t04glovern/UGATIT">available here</a>.
+                    The GAN we are using is based on original work by Junho Kim, Minjae Kim, Hyeonwoo Kang, and
+                    Kwanghee Lee. Their repository is <a href="https://github.com/taki0112/UGATIT">available here</a>.
                 </div>
             </div>
         </section>
