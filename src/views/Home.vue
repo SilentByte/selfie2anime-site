@@ -55,7 +55,7 @@
                     Here's a <span class="text-primary font-weight-bold">quick</span> overview
                 </h2>
 
-                <div class="my-5">
+                <div class="my-5 text-muted" style="line-height: 2em">
                     Using machine learning techniques combined with a
                     <a href="https://en.wikipedia.org/wiki/Generative_adversarial_network">
                         Generative Adversarial Network (GAN)
@@ -101,6 +101,19 @@
                             </div>
                         </div>
                     </div>
+                </div>
+
+                <div class="my-5 text-muted" style="line-height: 2em">
+                    Be sure to <a href="#contact" class="js-scroll-trigger">follow us on social media</a>
+                    for further updates! If you are interested in how this works, we have made the source code
+                    available on Github for both the
+                    <a href="https://github.com/SilentByte/selfie2anime-site">front-end</a>
+                    and the
+                    <a href="https://github.com/t04glovern/selfie2anime">back-end</a>.
+                </div>
+
+                <div class="my-5 text-muted" style="line-height: 2em">
+                    The GAN itself is <a href="https://github.com/t04glovern/UGATIT">available here</a>.
                 </div>
             </div>
         </section>
