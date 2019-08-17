@@ -15,7 +15,7 @@
                            class="photo-input"
                            @change="onPhotoSelected" />
                     <label for="photo-input">
-                        <h1 class="d-block text-uppercase mx-3 px-2 mx-lg-5 px-lg-4" style="font-size: 2.2em;">
+                        <h1 class="d-block text-uppercase mx-3 px-2 mx-lg-5 px-lg-4">
                             What do <span class="text-primary font-weight-bold">YOU</span>
                             look like in <span class="text-primary font-weight-bold">anime</span>?
                         </h1>
@@ -42,9 +42,11 @@
                     </button>
                 </div>
             </div>
-            <div v-show="step === 'email'" class="email-container col-sm">
-                <div style="margin: 80px 50px 70px 50px">
-                    <form @submit.prevent="onUploadPhoto">
+            <div v-show="step === 'email'"
+                 class="email-container col-sm">
+                <div class="mx-3 my-5">
+                    <form class="my-md-5 py-md-4"
+                            @submit.prevent="onUploadPhoto">
                         <div class="form-row mb-4 align-items-center justify-content-center">
                             <div class="col col-10 text-center">
                                 <div style="font-size: 1.2em; line-height: 1.8em">
@@ -55,31 +57,31 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="form-row align-items-center justify-content-center">
-                            <div class="col col-10">
-                                <div class="input-group mt-3 mb-2">
-                                    <input required
-                                           type="email"
-                                           class="form-control form-control-lg"
-                                           placeholder="Enter your e-mail address..."
-                                           v-model="email" />
-                                    <div class="input-group-append">
-                                        <button type="submit"
-                                                :class="['btn btn-primary px-5 text-uppercase', canSubmit ? '' : 'disabled']">
-                                            Upload
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="progress" style="height: 4px">
-                                    <div class="progress-bar"
-                                         role="progressbar"
-                                         :style="{width: progress + '%'}">
-                                    </div>
+                        <div class="form-row justify-content-center text-center">
+                            <div class="col-12 mb-2 col-md-8">
+                                <input required
+                                       type="email"
+                                       class="form-control form-control-lg"
+                                       placeholder="Enter your e-mail address..."
+                                       v-model="email" />
+                            </div>
+
+                            <div class="col-12 col-md-2">
+                                <button type="submit"
+                                        :class="['btn btn-primary btn-lg px-5 px-sm-3 text-uppercase', canSubmit ? '' : 'disabled']">
+                                    Upload
+                                </button>
+                            </div>
+
+                            <div class="progress" style="height: 4px">
+                                <div class="progress-bar"
+                                     role="progressbar"
+                                     :style="{width: progress + '%'}">
                                 </div>
                             </div>
                         </div>
                         <div class="form-row mt-4 align-items-center justify-content-center">
-                            <div class="col col-10 text-muted text-center">
+                            <div class="col col-10 text-muted text-center" style="line-height: 1.5em">
                                 <small>
                                     By using our service, you are agreeing to our
                                     <a href="https://selfie2anime.com/privacy.html" target="_blank">

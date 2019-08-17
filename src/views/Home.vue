@@ -252,11 +252,12 @@
         font-size: 1.2rem !important;
     }
 
-    .navbar-brand {
+    #mainNav .navbar-brand {
         font-size: 1.7rem !important;
+        color: rgba(255,255,255,0.7);
     }
 
-    .navbar-brand-inverted {
+    #mainNav .navbar-brand-inverted {
         color: #f06292;
     }
 
