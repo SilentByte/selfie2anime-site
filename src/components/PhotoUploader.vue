@@ -199,7 +199,6 @@
                     crop: this.cropCoordinates,
                     photo: this.photoDataUrl,
                 }, {
-                    withCredentials: true,
                     onUploadProgress: this.onUploadProgress,
                 });
             } catch(e) {
