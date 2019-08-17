@@ -3,7 +3,7 @@
     Copyright (c) 2019 by SilentByte <https://www.silentbyte.com/>
 -->
 
-<!--suppress HtmlUnknownAnchorTarget -->
+<!--suppress HtmlUnknownAnchorTarget, CheckEmptyScriptTag -->
 <template>
     <div id="home">
         <!-- Navigation -->
@@ -50,10 +50,67 @@
 
         <!-- About Section -->
         <section id="about" class="page-section">
+            <div class="container carousel-container text-center">
+                <h2 class="mt-0">
+                    Here's a <span class="text-primary font-weight-bold">quick</span> overview
+                </h2>
+
+                <div class="my-5">
+                    Using machine learning techniques combined with a
+                    <a href="https://en.wikipedia.org/wiki/Generative_adversarial_network">
+                        Generative Adversarial Network (GAN)
+                    </a> makes it possible to generate <span class="text-primary font-weight-bold">anime-style</span>
+                    characters based on real people. Using this website, you can generate your own
+                    <span class="text-primary font-weight-bold">anime alter ego</span>!
+                    Here are a few examples for you to check out.
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col col-sm-12 col-md-8 col-lg-6">
+                        <div class="card shadow-lg">
+                            <div class="card-body p-2">
+                                <div id="carousel"
+                                     class="carousel slide carousel-fade"
+                                     data-ride="carousel">
+                                    <ol class="carousel-indicators">
+                                        <li v-for="i in carouselImageCount"
+                                            data-target="#carousel"
+                                            :data-slide-to="i"
+                                            class="active" />
+                                    </ol>
+                                    <div class="carousel-inner justify-content-center align-content-center text-center">
+                                        <div v-for="i in carouselImageCount"
+                                             :key="`carousel-image-${i}`"
+                                             :class="['carousel-item', i === 1? 'active':'']">
+                                            <img class="d-block w-100"
+                                                 :src="`./img/carousel/${i}.jpg`"
+                                                 :alt="`Example Image #${i}`">
+                                        </div>
+                                    </div>
+                                    <a class="carousel-control-prev" href="#carousel" role="button"
+                                       data-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                    <a class="carousel-control-next" href="#carousel" role="button"
+                                       data-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Action Section -->
+        <section id="action" class="page-section bg-dark">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-lg-8 text-center">
-                        <h2 class="mt-0" style="font-size: 3em">
+                    <div class="col-lg-8 text-center text-light py-5">
+                        <h2 class="mt-0">
                             What do <span class="text-primary font-weight-bold">YOU</span>
                             look like in <span class="text-primary font-weight-bold">anime</span>?
                         </h2>
@@ -151,6 +208,8 @@
         },
     })
     export default class Home extends Vue {
+        carouselImageCount = 10;
+
         mounted() {
             creative.init(jQuery);
         }
@@ -158,6 +217,12 @@
 </script>
 
 <style lang="scss" scoped>
+    $carousel-size: 100px;
+
+    section h2 {
+        font-size: 2.8em;
+    }
+
     .nav-item, .page-section h2 {
         text-transform: uppercase;
     }
