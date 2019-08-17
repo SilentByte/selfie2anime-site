@@ -159,10 +159,11 @@
         cropCoordinates: { x: number, y: number, width: number; height: number } = {x: 0, y: 0, width: 0, height: 0};
         email = "";
         progress = 0;
+        submitted = false;
         hasUploadError = false;
 
         get canSubmit() {
-            return /\S+@\S+\.\S+/.test(this.email);
+            return /\S+@\S+\.\S+/.test(this.email) && !this.submitted;
         }
 
         scrollToTop() {
@@ -191,6 +192,7 @@
                 return;
             }
 
+            this.submitted = true;
             try {
                 await axios.post(process.env.VUE_APP_API_URL, {
                     email: this.email,
