@@ -221,7 +221,7 @@
         },
     })
     export default class Home extends Vue {
-        carouselImageCount = 10;
+        carouselImageCount = 8;
 
         mounted() {
             creative.init(jQuery);

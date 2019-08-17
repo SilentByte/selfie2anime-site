@@ -197,10 +197,13 @@
                     crop: this.cropCoordinates,
                     photo: this.photoDataUrl,
                 }, {
+                    withCredentials: true,
                     onUploadProgress: this.onUploadProgress,
                 });
             } catch(e) {
                 this.hasUploadError = true;
+
+                // tslint:disable-next-line
                 console.log(e);
             } finally {
                 this.step = "done";
