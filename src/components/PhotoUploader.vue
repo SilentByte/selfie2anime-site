@@ -84,6 +84,7 @@
     export default class PhotoUploader extends Vue {
         step: "drop" | "crop" | "email" | "done" = "drop";
         photoDataUrl = "";
+        cropCoordinates: { x: number, y: number, width: number; height: number } = {x: 0, y: 0, width: 0, height: 0};
         email = "";
 
         async onPhotoSelected(e: Event) {
@@ -93,13 +94,13 @@
         }
 
         onPhotoCropped() {
+            this.cropCoordinates = (this.$refs.cropper as any).getCropCoordinates();
             this.step = "email";
-            (this.$refs.cropper as any).getCropCoordinates();
         }
 
         onUploadPhoto() {
-            // console.log(this.email);
-            // console.log((this.$refs.cropper as any).getCropCoordinates());
+            console.log(this.email);
+            console.log(this.cropCoordinates);
         }
     }
 </script>

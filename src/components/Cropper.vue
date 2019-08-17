@@ -35,7 +35,16 @@
 
         @Watch("photoUrl", {deep: true})
         onPhotoUrlChanged(value: string) {
-            this.cropper.setImage(value);
+            this.cropper.destroy();
+            this.$nextTick(() => {
+                (this.$refs.image as any).src = value;
+                this.$nextTick(() => {
+                    this.cropper = new Croppr(this.$refs.image as HTMLElement, {
+                        aspectRatio: 1.0,
+                        minSize: [50, 50],
+                    });
+                });
+            });
         }
 
         mounted() {
