@@ -162,7 +162,7 @@
         },
     })
     export default class PhotoUploader extends Vue {
-        step: "drop" | "crop" | "email" | "done" = "email";
+        step: "drop" | "crop" | "email" | "done" = "drop";
         photoDataUrl = "";
         cropCoordinates: { x: number, y: number, width: number; height: number } = {x: 0, y: 0, width: 0, height: 0};
         email = "";
