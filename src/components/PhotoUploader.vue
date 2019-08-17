@@ -44,7 +44,7 @@
             </div>
             <div v-show="step === 'email'" class="email-container col-sm">
                 <div style="margin: 80px 50px">
-                    <form>
+                    <form @submit.prevent="onUploadPhoto">
                         <div class="form-row mb-4 align-items-center justify-content-center">
                             <div class="col col-10 text-center">
                                 <div style="font-size: 1.2em; line-height: 1.8em">
@@ -58,21 +58,69 @@
                         <div class="form-row align-items-center justify-content-center">
                             <div class="col col-10">
                                 <div class="input-group mt-3 mb-2">
-                                    <input type="email"
+                                    <input required
+                                           type="email"
                                            class="form-control form-control-lg"
                                            placeholder="Enter your e-mail address..."
                                            v-model="email" />
                                     <div class="input-group-append">
-                                        <button type="button"
-                                                class="btn btn-primary px-5 text-uppercase"
-                                                @click="onUploadPhoto">
+                                        <button type="submit"
+                                                :class="['btn btn-primary px-5 text-uppercase', canSubmit ? '' : 'disabled']">
                                             Submit
                                         </button>
+                                    </div>
+                                </div>
+                                <div class="progress" style="height: 4px">
+                                    <div class="progress-bar"
+                                         role="progressbar"
+                                         :style="{width: progress + '%'}">
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </form>
+                </div>
+            </div>
+            <div v-show="step === 'done'" class="col-sm">
+                <div class="text-center m-5 pt-5 pb-4">
+                    <div v-if="hasUploadError">
+                        <div style="font-size: 2em; line-height: 1.8em">
+                            <span class="text-primary font-weight-bold">
+                                Oh Noes!
+                            </span>
+                            ಥ_ಥ
+                        </div>
+                        <div class="mt-4 mb-5 pt-2" style="font-size: 1.2em; line-height: 1.8em">
+                            Something has gone <span class="text-primary font-weight-bold">terribly wrong</span>!
+                            <br />
+                            Please try uploading your selfie again.
+                        </div>
+
+                        <a href="/"
+                           class="btn btn-primary btn-lg p-3 text-uppercase"
+                           role="button"
+                           aria-pressed="true">
+                            Try Again!
+                        </a>
+                    </div>
+                    <div v-else>
+                        <div style="font-size: 2em; line-height: 1.8em">
+                            <span class="text-primary font-weight-bold">All Done!</span>
+                            (づ｡◕‿‿◕｡)づ
+                        </div>
+                        <div class="mt-4 mb-5 pt-2" style="font-size: 1.2em; line-height: 1.8em">
+                            We've started processing your selfie and will send the result to
+                            <span class="text-primary font-weight-bold">{{ email }}</span>
+                            as soon as it's available!
+                        </div>
+
+                        <a href="/"
+                           class="btn btn-primary btn-lg p-3 text-uppercase"
+                           role="button"
+                           aria-pressed="true">
+                            Upload another one!
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -110,6 +158,12 @@
         photoDataUrl = "";
         cropCoordinates: { x: number, y: number, width: number; height: number } = {x: 0, y: 0, width: 0, height: 0};
         email = "";
+        progress = 0;
+        hasUploadError = false;
+
+        get canSubmit() {
+            return /\S+@\S+\.\S+/.test(this.email);
+        }
 
         scrollToTop() {
             const element = this.$refs["photo-uploader"] as HTMLElement;
@@ -129,20 +183,28 @@
         }
 
         onUploadProgress(e: ProgressEvent) {
-            // TODO: Implement progress.
-            console.log(e);
+            this.progress = e.loaded / e.total * 100;
         }
 
         async onUploadPhoto() {
-            const result = await axios.post(process.env.VUE_APP_API_URL, {
-                email: this.email,
-                crop: this.cropCoordinates,
-                photo: this.photoDataUrl,
-            }, {
-                onUploadProgress: this.onUploadProgress,
-            });
+            if(!this.canSubmit) {
+                return;
+            }
 
-            // TODO: Implement error handling.
+            try {
+                await axios.post(process.env.VUE_APP_API_URL, {
+                    email: this.email,
+                    crop: this.cropCoordinates,
+                    photo: this.photoDataUrl,
+                }, {
+                    onUploadProgress: this.onUploadProgress,
+                });
+            } catch(e) {
+                this.hasUploadError = true;
+                console.log(e);
+            } finally {
+                this.step = "done";
+            }
         }
     }
 </script>
