@@ -196,7 +196,7 @@
                 <div class="small text-center text-muted">
                     <a href="https://selfie2anime.com/privacy.html" target="_blank">
                         Privacy Statement
-                    </a>.
+                    </a>
                 </div>
 
                 <hr />
