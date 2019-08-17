@@ -73,11 +73,11 @@
                 <div class="row no-gutters">
                     <div v-for="i in 96"
                          class="col-lg-1 col-md-2 col-sm-3 col-4">
-                        <a class="portfolio-box" :href="`img/portfolio/original/${i}.jpg`">
+                        <a class="portfolio-box" :href="`./img/portfolio/composite/${i}.jpg`">
                             <img class="img-fluid mx-auto d-block"
-                                 :src="`img/portfolio/gan/${i}.jpg`" alt="">
+                                 :src="`./img/portfolio/gan/${i}.jpg`" alt="">
                             <div class="portfolio-box-caption">
-                                <img class="img-fluid" :src="`img/portfolio/original/${i}.jpg`" alt="">
+                                <img class="img-fluid" :src="`./img/portfolio/original/${i}.jpg`" alt="">
                             </div>
                         </a>
                     </div>

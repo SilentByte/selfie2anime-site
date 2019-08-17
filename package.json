@@ -20,6 +20,8 @@
     "@vue/cli-plugin-babel": "^3.10.0",
     "@vue/cli-plugin-typescript": "^3.10.0",
     "@vue/cli-service": "^3.10.0",
+    "glob": "^7.1.4",
+    "jimp": "^0.6.4",
     "sass": "^1.18.0",
     "sass-loader": "^7.1.0",
     "typescript": "^3.4.3",
