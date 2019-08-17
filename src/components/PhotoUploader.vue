@@ -202,8 +202,7 @@
                     onUploadProgress: this.onUploadProgress,
                 });
             } catch(e) {
-                // TODO: HOTFIX, set to true again.
-                this.hasUploadError = false;
+                this.hasUploadError = true;
 
                 // tslint:disable-next-line
                 console.log(e);
