@@ -11,7 +11,7 @@
              class="navbar navbar-expand-lg navbar-light fixed-top py-3">
             <div class="container">
                 <a href="#home" class="navbar-brand js-scroll-trigger">
-                    Selfie2Anime
+                    Selfie2Anime <span class="navbar-brand-inverted">アニメ</span>
                 </a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
                         data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
@@ -170,6 +170,10 @@
         font-size: 1.7rem !important;
     }
 
+    .navbar-brand-inverted {
+        color: #f06292;
+    }
+
     #mainNav {
         background: rgba(30, 30, 30, 0.8);
     }
@@ -179,6 +183,10 @@
 
         .navbar-brand {
             color: #f06292;
+        }
+
+        .navbar-brand-inverted {
+            color: #212529;
         }
     }
 
