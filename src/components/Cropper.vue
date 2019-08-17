@@ -42,6 +42,7 @@
                     this.cropper = new Croppr(this.$refs.image as HTMLElement, {
                         aspectRatio: 1.0,
                         minSize: [50, 50],
+                        startSize: [75, 75, "%"],
                     });
                 });
             });

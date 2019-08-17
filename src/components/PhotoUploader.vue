@@ -15,10 +15,10 @@
                            class="photo-input"
                            @change="onPhotoSelected" />
                     <label for="photo-input">
-                        <span class="d-block text-uppercase">
+                        <h1 class="d-block text-uppercase mx-3 px-2 mx-lg-5 px-lg-4" style="font-size: 2.2em;">
                             What do <span class="text-primary font-weight-bold">YOU</span>
                             look like in <span class="text-primary font-weight-bold">anime</span>?
-                        </span>
+                        </h1>
                         <i class="fa fa-cloud-upload fa-5x my-4 text-primary"></i>
                         <span class="d-block text-primary">
                             Upload a Photo
@@ -28,6 +28,10 @@
             </div>
             <div v-show="step === 'crop'" class="crop-container col-sm">
                 <div class="crop-container-inner text-center">
+                    <div class="mt-5 mb-4" style="font-size: 1.2em">
+                        Now please <span class="text-primary font-weight-bold">crop</span>
+                        the photo to your <span class="text-primary font-weight-bold">face</span> only!
+                    </div>
                     <Cropper ref="cropper"
                              class="mb-3"
                              :photoUrl="photoDataUrl" />
@@ -39,17 +43,36 @@
                 </div>
             </div>
             <div v-show="step === 'email'" class="email-container col-sm">
-                <div class="text-center" style="margin: 50px">
-                    <input type="text"
-                           class="form-control"
-                           placeholder="E-Mail"
-                           v-model="email" />
-
-                    <button type="button"
-                            class="btn btn-primary btn-lg mt-3 p-3 text-uppercase"
-                            @click="onUploadPhoto">
-                        SEND (DEBUG)
-                    </button>
+                <div style="margin: 50px">
+                    <form>
+                        <div class="form-row mb-4 align-items-center justify-content-center">
+                            <div class="col col-10 text-center">
+                                <div style="font-size: 1.2em; line-height: 1.8em">
+                                    This is going to take a while!
+                                    <span class="text-primary text-nowrap font-weight-bold">(◠‿◠)</span>
+                                    We'll send <span class="text-primary font-weight-bold">your anime selfie</span>
+                                    to <span class="text-primary font-weight-bold">your email</span> once it's ready.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row align-items-center justify-content-center">
+                            <div class="col col-10">
+                                <div class="input-group mb-2">
+                                    <input type="email"
+                                           class="form-control form-control-lg"
+                                           placeholder="Enter your e-mail address..."
+                                           v-model="email" />
+                                    <div class="input-group-append">
+                                        <button type="button"
+                                                class="btn btn-primary px-5 text-uppercase"
+                                                @click="onUploadPhoto">
+                                            Submit
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -63,6 +86,7 @@
         Vue,
     } from "vue-property-decorator";
 
+    import axios from "axios";
     import Cropper from "@/components/Cropper.vue";
 
     function fileToDataUrl(file: File): Promise<string> {
@@ -104,9 +128,21 @@
             this.$nextTick(() => this.scrollToTop());
         }
 
-        onUploadPhoto() {
-            console.log(this.email);
-            console.log(this.cropCoordinates);
+        onUploadProgress(e: ProgressEvent) {
+            // TODO: Implement progress.
+            console.log(e);
+        }
+
+        async onUploadPhoto() {
+            const result = await axios.post(process.env.VUE_APP_API_URL, {
+                email: this.email,
+                crop: this.cropCoordinates,
+                photo: this.photoDataUrl,
+            }, {
+                onUploadProgress: this.onUploadProgress,
+            });
+
+            // TODO: Implement error handling.
         }
     }
 </script>
