@@ -82,7 +82,9 @@
                             <div class="col col-10 text-muted text-center">
                                 <small>
                                     By using our service, you are agreeing to our
-                                    <a href="http://localhost:8080/privacy.html" target="_blank">Privacy Statement</a>.
+                                    <a href="https://selfie2anime.com/privacy.html" target="_blank">
+                                        Privacy Statement
+                                    </a>.
                                 </small>
                             </div>
                         </div>

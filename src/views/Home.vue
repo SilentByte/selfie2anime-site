@@ -194,7 +194,9 @@
         <footer class="bg-light py-5">
             <div class="container">
                 <div class="small text-center text-muted">
-                    <a href="http://localhost:8080/privacy.html" target="_blank">Privacy Statement</a>.
+                    <a href="https://selfie2anime.com/privacy.html" target="_blank">
+                        Privacy Statement
+                    </a>.
                 </div>
 
                 <hr />
