@@ -194,6 +194,12 @@
         <footer class="bg-light py-5">
             <div class="container">
                 <div class="small text-center text-muted">
+                    <a href="http://localhost:8080/privacy.html" target="_blank">Privacy Statement</a>.
+                </div>
+
+                <hr />
+
+                <div class="small text-center text-muted">
                     Copyright &copy; 2019 by
                     <a href="https://twitter.com/RicoBeti">Rico Beti</a>
                     &amp;

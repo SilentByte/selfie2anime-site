@@ -43,7 +43,7 @@
                 </div>
             </div>
             <div v-show="step === 'email'" class="email-container col-sm">
-                <div style="margin: 80px 50px">
+                <div style="margin: 80px 50px 70px 50px">
                     <form @submit.prevent="onUploadPhoto">
                         <div class="form-row mb-4 align-items-center justify-content-center">
                             <div class="col col-10 text-center">
@@ -66,7 +66,7 @@
                                     <div class="input-group-append">
                                         <button type="submit"
                                                 :class="['btn btn-primary px-5 text-uppercase', canSubmit ? '' : 'disabled']">
-                                            Submit
+                                            Upload
                                         </button>
                                     </div>
                                 </div>
@@ -76,6 +76,14 @@
                                          :style="{width: progress + '%'}">
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                        <div class="form-row mt-4 align-items-center justify-content-center">
+                            <div class="col col-10 text-muted text-center">
+                                <small>
+                                    By using our service, you are agreeing to our
+                                    <a href="http://localhost:8080/privacy.html" target="_blank">Privacy Statement</a>.
+                                </small>
                             </div>
                         </div>
                     </form>
@@ -154,7 +162,7 @@
         },
     })
     export default class PhotoUploader extends Vue {
-        step: "drop" | "crop" | "email" | "done" = "drop";
+        step: "drop" | "crop" | "email" | "done" = "email";
         photoDataUrl = "";
         cropCoordinates: { x: number, y: number, width: number; height: number } = {x: 0, y: 0, width: 0, height: 0};
         email = "";
