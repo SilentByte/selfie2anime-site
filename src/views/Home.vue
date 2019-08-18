@@ -112,6 +112,15 @@
                     <a href="https://github.com/t04glovern/selfie2anime">back-end</a>.
                 </div>
 
+                <div class="mt-5">
+                    <div class="large-caption text-primary">
+                        <div class="spinner-grow" style="width: 0.5em; height: 0.5em; margin-bottom: 0.25em;"></div>
+                        {{ estimateCounter }}
+                        <div class="spinner-grow" style="width: 0.5em; height: 0.5em; margin-bottom: 0.25em;"></div>
+                    </div>
+                    <div class="text-primary text-uppercase mt-4">selfies &amp; counting</div>
+                </div>
+
                 <div class="my-5 text-muted" style="line-height: 2em">
                     The GAN we are using is based on original work by Junho Kim, Minjae Kim, Hyeonwoo Kang, and
                     Kwanghee Lee. Their repository is <a href="https://github.com/taki0112/UGATIT">available here</a>.
@@ -220,6 +229,7 @@
         Vue,
     } from "vue-property-decorator";
 
+    import axios from "axios";
     import * as creative from "@/vendor/creative";
 
     import PhotoUploader from "@/components/PhotoUploader.vue";
@@ -231,9 +241,62 @@
     })
     export default class Home extends Vue {
         carouselImageCount = 22;
+        counter = 0;
+        estimateCounter = 0;
+        counterTimestamp = 0;
+        selfiesPerSecond = 0;
+        counterIntervalHandle = 0;
+
+        onUpdateCounter() {
+            this.estimateCounter = Math.ceil(
+                this.counter
+                + (Date.now() / 1000 - this.counterTimestamp)
+                * this.selfiesPerSecond,
+            );
+        }
+
+        async fetchStats() {
+            // TODO: Replace current manually calculated estimates with actual real-time numbers once backend is done.
+            this.counter = 12052;
+            this.selfiesPerSecond = 0.3568;
+            this.counterTimestamp = 1566112917;
+            this.estimateCounter = this.counter;
+
+            if(this.counterIntervalHandle) {
+                clearInterval(this.counterIntervalHandle);
+            }
+
+            this.onUpdateCounter();
+            this.counterIntervalHandle = setInterval(this.onUpdateCounter, 4000);
+
+            // try {
+            //     const response = await axios.get(process.env.VUE_APP_API_COUNT_URL);
+            //     this.counter = parseInt(response.data["count"]);
+            //     this.selfiesPerSecond = parseFloat(response.data["sps"]);
+            //     this.counterTimestamp = Date.now();
+            //     this.estimateCounter = this.counter;
+            //
+            //     if(this.counterIntervalHandle) {
+            //         clearInterval(this.counterIntervalHandle);
+            //     }
+            //
+            //     this.onUpdateCounter();
+            //     this.counterIntervalHandle = setInterval(this.onUpdateCounter, 4000);
+            // } catch(e) {
+            //     // tslint:disable-next-line
+            //     console.log(e);
+            // }
+        }
 
         mounted() {
+            this.fetchStats();
             creative.init(jQuery);
+        }
+
+        beforeDestroy() {
+            if(this.counterIntervalHandle) {
+                clearInterval(this.counterIntervalHandle);
+            }
         }
     }
 </script>
@@ -241,8 +304,9 @@
 <style lang="scss" scoped>
     $carousel-size: 100px;
 
-    section h2 {
+    section h2, .large-caption {
         font-size: 2.8em;
+        line-height: 1.25;
     }
 
     .nav-item, .page-section h2 {
@@ -255,7 +319,7 @@
 
     #mainNav .navbar-brand {
         font-size: 1.7rem !important;
-        color: rgba(255,255,255,0.7);
+        color: rgba(255, 255, 255, 0.7);
     }
 
     #mainNav .navbar-brand-inverted {
