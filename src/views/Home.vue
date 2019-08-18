@@ -204,6 +204,10 @@
         <footer class="bg-light py-5">
             <div class="container">
                 <div class="small text-center text-muted">
+                    <a href="https://selfie2anime.com/terms.html" target="_blank">
+                        Terms of Service
+                    </a>
+                    &bull;
                     <a href="https://selfie2anime.com/privacy.html" target="_blank">
                         Privacy Statement
                     </a>

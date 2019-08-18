@@ -93,10 +93,14 @@
                         <div class="form-row mt-4 align-items-center justify-content-center">
                             <div class="col col-10 text-muted text-center" style="line-height: 1.5em">
                                 <small>
-                                    By using our service, you are agreeing to our
+                                    By using our service, you are agreeing to the
+                                    <a href="https://selfie2anime.com/terms.html" target="_blank">
+                                        Terms&nbsp;of&nbsp;Service
+                                    </a>
+                                    and
                                     <a href="https://selfie2anime.com/privacy.html" target="_blank">
-                                        Privacy Statement
-                                    </a>.
+                                        Privacy&nbsp;Statement.
+                                    </a>
                                 </small>
                             </div>
                         </div>
