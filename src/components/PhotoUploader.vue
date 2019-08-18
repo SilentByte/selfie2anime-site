@@ -5,9 +5,11 @@
 
 <!--suppress HtmlFormInputWithoutLabel -->
 <template>
-    <div ref="photo-uploader" class="photo-uploader shadow-sm">
+    <div ref="photo-uploader"
+         class="photo-uploader shadow-sm">
         <div class="row">
-            <div v-show="step === 'drop'" class="drop-container col-sm">
+            <div v-show="step === 'drop'"
+                 class="drop-container col-sm">
                 <div class="drop-container-inner">
                     <input id="photo-input"
                            type="file"
@@ -20,8 +22,13 @@
                             look like in <span class="text-primary font-weight-bold">anime</span>?
                         </h1>
                         <i class="fa fa-cloud-upload fa-5x my-4 text-primary"></i>
-                        <span class="d-block text-primary">
+                        <span class="d-block mb-4 text-primary">
                             Upload a Photo
+                        </span>
+
+                        <span class="text-muted"
+                              style="font-size: 11pt;">
+                            (Photos you upload will be kept <strong>absolutely private</strong>)
                         </span>
                     </label>
                 </div>
@@ -46,7 +53,7 @@
                  class="email-container col-sm">
                 <div class="mx-3 my-5">
                     <form class="my-md-5 py-md-4"
-                            @submit.prevent="onUploadPhoto">
+                          @submit.prevent="onUploadPhoto">
                         <div class="form-row mb-4 align-items-center justify-content-center">
                             <div class="col col-10 text-center">
                                 <div style="font-size: 1.2em; line-height: 1.8em">
@@ -62,7 +69,7 @@
                                 <input required
                                        type="email"
                                        class="form-control form-control-lg"
-                                       placeholder="Enter your e-mail address..."
+                                       placeholder="Enter your e-mail address…"
                                        v-model="email" />
                             </div>
 
@@ -250,7 +257,7 @@
     .photo-input + label {
         width: 100%;
         height: 100%;
-        padding: 100px 0;
+        padding: 100px 0 60px 0;
         font-size: 1.25em;
         text-align: center;
         border: 2px dotted #f06292;
