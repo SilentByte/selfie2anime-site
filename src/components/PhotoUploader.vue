@@ -146,6 +146,41 @@
                 </div>
             </div>
         </div>
+
+        <!-- Social Links -->
+        <div v-if="step === 'drop'"
+             class="row justify-content-center">
+            <div class="row mt-2 mb-3 social-container text-center">
+                <div class="col-12 my-1 col-md-4">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://selfie2anime.com"
+                       class="btn btn-lg facebook"
+                       target="_blank"
+                       rel="noopener">
+                        <i class="fa fa-facebook-square"></i>
+                        Share
+                    </a>
+                </div>
+
+                <div class="col-12 my-1 col-md-4">
+                    <a href="https://twitter.com/intent/tweet?url=https://selfie2anime.com&text=What do YOU look like in Anime?&hashtags=selfie2anime"
+                       class="btn btn-lg twitter"
+                       target="_blank"
+                       rel="noopener">
+                        <i class="fa fa-twitter"></i>
+                        Tweet
+                    </a>
+                </div>
+
+                <div class="col-12 my-1 col-md-4">
+                    <a href="mailto:?subject=What do YOU look like in Anime?&body=Check out https://selfie2anime.com to find out!"
+                       class="btn btn-lg email"
+                       rel="noopener">
+                        <i class="fa fa-envelope"></i>
+                        Send
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -239,13 +274,48 @@
     $border-radius: 20px;
     $background-color: rgba(255, 255, 255, 0.9);
 
+    .social-container .btn {
+        min-width: 160px;
+        text-transform: uppercase;
+        white-space: nowrap;
+        color: #fff;
+
+        .fa {
+            margin-right: 0.25em;
+        }
+
+        &.facebook {
+            background-color: #3b5998;
+
+            &:hover {
+                background-color: #556fbb;
+            }
+        }
+
+        &.twitter {
+            background-color: #38a1f3;
+
+            &:hover {
+                background-color: #269ce5;
+            }
+        }
+
+        &.email {
+            background-color: #444;
+
+            &:hover {
+                background-color: #555;
+            }
+        }
+    }
+
     .photo-uploader {
-        background: $background-color;
+        background-color: $background-color;
         border-radius: $border-radius;
     }
 
     .drop-container-inner {
-        margin: 20px;
+        margin: 20px 20px 0 20px;
     }
 
     .photo-input {
