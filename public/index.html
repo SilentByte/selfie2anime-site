@@ -22,12 +22,13 @@
         }
 
         gtag("js", new Date());
-        gtag("config", "UA-71336829-28");
+        gtag("config", "<%= VUE_APP_ANALYTICS_CODE %>");
     </script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
     <script>
         (adsbygoogle = window.adsbygoogle || []).push({
-            google_ad_client: "ca-pub-1912853795528910",
+            google_ad_client: "<%= VUE_APP_ADSENSE_CODE %>",
             enable_page_level_ads: true,
         });
     </script>
