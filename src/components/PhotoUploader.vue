@@ -3,7 +3,7 @@
     Copyright (c) 2019 by SilentByte <https://www.silentbyte.com/>
 -->
 
-<!--suppress HtmlFormInputWithoutLabel -->
+<!--suppress HtmlFormInputWithoutLabel, HtmlUnknownTag -->
 <template>
     <div ref="photo-uploader"
          class="photo-uploader shadow-sm">
@@ -75,15 +75,19 @@
 
                             <div class="col-12 col-md-2">
                                 <button type="submit"
-                                        :class="['btn btn-primary btn-lg px-5 px-sm-3 text-uppercase', canSubmit ? '' : 'disabled']">
+                                        style="margin-right: 0;"
+                                        :class="['btn btn-primary btn-lg btn-block text-uppercase',
+                                                 canSubmit ? '' : 'disabled']">
                                     Upload
                                 </button>
                             </div>
 
-                            <div class="progress" style="height: 4px">
-                                <div class="progress-bar"
-                                     role="progressbar"
-                                     :style="{width: progress + '%'}">
+                            <div class="col-12 col-md-10">
+                                <div class="progress" style="height: 4px">
+                                    <div class="progress-bar"
+                                         role="progressbar"
+                                         :style="{width: progress + '%'}">
+                                    </div>
                                 </div>
                             </div>
                         </div>
