@@ -11,7 +11,8 @@
              class="navbar navbar-expand-lg navbar-light fixed-top py-3">
             <div class="container">
                 <a href="#home" class="navbar-brand js-scroll-trigger">
-                    Selfie2Anime <span class="navbar-brand-inverted">アニメ</span>
+                    <span class="navbar-brand-inverted">Selfie</span>2<span class="navbar-brand-inverted">Anime</span>
+                    アニメ
                 </a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
                         data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
@@ -297,7 +298,7 @@
             }
 
             this.onUpdateCounter();
-            this.counterIntervalHandle = setInterval(this.onUpdateCounter, 4000);
+            this.counterIntervalHandle = window.setInterval(this.onUpdateCounter, 4000);
 
             // try {
             //     const response = await axios.get(process.env.VUE_APP_API_COUNT_URL);

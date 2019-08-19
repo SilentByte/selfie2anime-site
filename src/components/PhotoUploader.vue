@@ -23,7 +23,7 @@
                         </h1>
                         <i class="fa fa-cloud-upload fa-5x my-4 text-primary"></i>
                         <span class="d-block mb-4 text-primary">
-                            Upload a Photo
+                            Upload a Selfie
                         </span>
 
                         <span class="text-muted"
@@ -114,7 +114,7 @@
                             <span class="text-primary font-weight-bold">
                                 Oh Noes!
                             </span>
-                            ಥ_ಥ
+                            <span class="text-nowrap"> ಥ_ಥ</span>
                         </div>
                         <div class="mt-4 mb-5 pt-2" style="font-size: 1.2em; line-height: 1.8em">
                             Something has gone <span class="text-primary font-weight-bold">terribly wrong</span>!
@@ -132,7 +132,7 @@
                     <div v-else>
                         <div style="font-size: 2em; line-height: 1.8em">
                             <span class="text-primary font-weight-bold">All Done!</span>
-                            (づ｡◕‿‿◕｡)づ
+                            <span class="text-nowrap"> (づ｡◕‿‿◕｡)づ</span>
                         </div>
                         <div class="mt-4 mb-5 pt-2" style="font-size: 1.2em; line-height: 1.8em">
                             We've started processing your selfie and will send the result to
@@ -196,18 +196,9 @@
     } from "vue-property-decorator";
 
     import axios from "axios";
-    import Cropper from "@/components/Cropper.vue";
+    import loadImage from "blueimp-load-image";
 
-    function fileToDataUrl(file: File): Promise<string> {
-        return new Promise((resolve, reject) => {
-            const reader = new FileReader();
-            reader.onerror = reject;
-            reader.onload = () => {
-                resolve(reader.result as string);
-            };
-            reader.readAsDataURL(file);
-        });
-    }
+    import Cropper from "@/components/Cropper.vue";
 
     @Component({
         components: {
@@ -234,8 +225,16 @@
 
         async onPhotoSelected(e: Event) {
             const file: File = (e.target as any).files[0];
-            this.photoDataUrl = await fileToDataUrl(file);
-            this.step = "crop";
+            loadImage(file, (canvas: HTMLCanvasElement) => {
+                    this.photoDataUrl = canvas.toDataURL("image/jpeg");
+                    this.step = "crop";
+                }, {
+                    canvas: true,
+                    orientation: true,
+                    maxWidth: 3840,
+                    maxHeight: 3840,
+                },
+            );
         }
 
         onPhotoCropped() {
@@ -255,7 +254,7 @@
 
             this.submitted = true;
             try {
-                await axios.post(process.env.VUE_APP_API_URL, {
+                await axios.post(process.env.VUE_APP_API_URL || "", {
                     email: this.email,
                     crop: this.cropCoordinates,
                     photo: this.photoDataUrl,
