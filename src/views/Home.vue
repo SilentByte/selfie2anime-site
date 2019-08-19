@@ -126,6 +126,32 @@
                     Kwanghee Lee. Their repository is <a href="https://github.com/taki0112/UGATIT">available here</a>.
                 </div>
             </div>
+            <div class="container pt-5">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 offset-md-0 col-lg-6">
+                        <a class="twitter-timeline"
+                           data-theme="light"
+                           data-link-color="#f06292"
+                           data-chrome="noheader nofooter noborders"
+                           data-tweet-limit="1"
+                           data-show-replies="true"
+                           href="https://twitter.com/RicoBeti/timelines/1163354787154259970?ref_src=twsrc%5Etfw">
+                            Selfie2Anime Tweets by @RicoBeti
+                        </a>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 offset-md-0 col-lg-6">
+                        <a class="twitter-timeline"
+                           data-theme="light"
+                           data-link-color="#f06292"
+                           data-chrome="noheader nofooter noborders"
+                           data-tweet-limit="1"
+                           data-show-replies="true"
+                           href="https://twitter.com/RicoBeti/timelines/1163362875022274560?ref_src=twsrc%5Etfw">
+                            Selfie2Anime Tweets by @RicoBeti
+                        </a>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- Action Section -->
