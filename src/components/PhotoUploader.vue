@@ -43,7 +43,7 @@
                              class="mb-3"
                              :photoUrl="photoDataUrl" />
                     <button type="button"
-                            class="btn btn-primary btn-lg p-3 mb-3 text-uppercase"
+                            class="btn btn-primary btn-lg p-3 mb-4 text-uppercase"
                             @click="onPhotoCropped">
                         Turn me into anime!
                     </button>
@@ -353,9 +353,5 @@
 
     .crop-container {
         margin: 0;
-    }
-
-    .crop-container-inner {
-        margin: 20px;
     }
 </style>
