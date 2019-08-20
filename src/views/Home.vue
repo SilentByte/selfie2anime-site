@@ -127,8 +127,46 @@
                     Kwanghee Lee. Their repository is <a href="https://github.com/taki0112/UGATIT">available here</a>.
                 </div>
             </div>
-            <div class="container pt-5">
-                <div class="row">
+            <div class="container pt-5 text-center">
+                <hr />
+                <h2 class="my-5 text-primary text-lowercase">
+                    <a href="https://twitter.com/intent/tweet?url=https://selfie2anime.com&text=What do YOU look like in Anime?&hashtags=selfie2anime"
+                       target="_blank"
+                       rel="noopener">
+                        #selfie2anime
+                    </a>
+                </h2>
+                <div class="row mt-2 mb-5 social-container text-center justify-content-center">
+                    <div class="col-12 my-1 col-md-3">
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://selfie2anime.com"
+                           class="btn btn-lg facebook"
+                           target="_blank"
+                           rel="noopener">
+                            <i class="fa fa-facebook-square"></i>
+                            Share
+                        </a>
+                    </div>
+
+                    <div class="col-12 my-1 col-md-3">
+                        <a href="https://twitter.com/intent/tweet?url=https://selfie2anime.com&text=What do YOU look like in Anime?&hashtags=selfie2anime"
+                           class="btn btn-lg twitter"
+                           target="_blank"
+                           rel="noopener">
+                            <i class="fa fa-twitter"></i>
+                            Tweet
+                        </a>
+                    </div>
+
+                    <div class="col-12 my-1 col-md-3">
+                        <a href="mailto:?subject=What do YOU look like in Anime?&body=Check out https://selfie2anime.com to find out!"
+                           class="btn btn-lg email"
+                           rel="noopener">
+                            <i class="fa fa-envelope"></i>
+                            Send
+                        </a>
+                    </div>
+                </div>
+                <div class="row pt-3">
                     <div class="col-12 col-sm-12 col-md-12 offset-md-0 col-lg-6">
                         <a class="twitter-timeline"
                            data-theme="light"
