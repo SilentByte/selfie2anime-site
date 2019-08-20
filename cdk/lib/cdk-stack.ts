@@ -34,8 +34,7 @@ export class CdkStack extends cdk.Stack {
     const gitHubSource = codebuild.Source.gitHub({
       owner: "SilentByte",
       repo: "selfie2anime-site",
-      reportBuildStatus: true,
-      webhook: true
+      reportBuildStatus: true
     });
 
     //
