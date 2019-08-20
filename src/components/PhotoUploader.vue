@@ -138,6 +138,11 @@
                             We've started processing your selfie and will send the result to
                             <span class="text-primary font-weight-bold">{{ email }}</span>
                             as soon as it's available!
+
+                            <div class="alert alert-info mt-3 small" role="alert">
+                                <strong>Heads up!</strong> Many people are creating anime selfies at the moment.
+                                Please be patient while we are processing your request!
+                            </div>
                         </div>
 
                         <a href="/"
