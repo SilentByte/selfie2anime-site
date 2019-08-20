@@ -1,6 +1,7 @@
 
-![Selfie2Anime](s2a.png) ![badge](https://codebuild.us-east-1.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoiZWJIeXI2TzlGWmx1eEc3dzJicFFEZ0FnZVpUK2U4LzZDeVQ2V0JhZE84bkZKK1BpQiswbG93OXlWUE96dnI1UVJzL3hucCtham43bHQrT3VDN3lmVHdnPSIsIml2UGFyYW1ldGVyU3BlYyI6IlkwbTJscTNWUlBiMEsrWTkiLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=master)
+![Selfie2Anime](s2a.png) 
 
+![badge](https://codebuild.us-east-1.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoiZWJIeXI2TzlGWmx1eEc3dzJicFFEZ0FnZVpUK2U4LzZDeVQ2V0JhZE84bkZKK1BpQiswbG93OXlWUE96dnI1UVJzL3hucCtham43bHQrT3VDN3lmVHdnPSIsIml2UGFyYW1ldGVyU3BlYyI6IlkwbTJscTNWUlBiMEsrWTkiLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=master)
 [![Selfie2Anime](https://img.shields.io/badge/app-selfie2anime-f06292.svg?style=for-the-badge)](https://selfie2anime.com)&nbsp;
 [![Wyve Version](https://img.shields.io/badge/version-1.0-05A5CC.svg?style=for-the-badge)](https://selfie2anime.com)&nbsp;
 [![Wyve Status](https://img.shields.io/badge/status-live-00B20E.svg?style=for-the-badge)](https://selfie2anime.com)
