@@ -1,7 +1,6 @@
 
 ![Selfie2Anime](s2a.png) 
 
-![badge](https://codebuild.us-east-1.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoiZWJIeXI2TzlGWmx1eEc3dzJicFFEZ0FnZVpUK2U4LzZDeVQ2V0JhZE84bkZKK1BpQiswbG93OXlWUE96dnI1UVJzL3hucCtham43bHQrT3VDN3lmVHdnPSIsIml2UGFyYW1ldGVyU3BlYyI6IlkwbTJscTNWUlBiMEsrWTkiLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=master)
 [![Selfie2Anime](https://img.shields.io/badge/app-selfie2anime-f06292.svg?style=for-the-badge)](https://selfie2anime.com)&nbsp;
 [![Version](https://img.shields.io/badge/version-1.0-05A5CC.svg?style=for-the-badge)](https://selfie2anime.com)&nbsp;
 [![Status](https://img.shields.io/badge/status-live-00B20E.svg?style=for-the-badge)](https://selfie2anime.com)
@@ -34,8 +33,29 @@ Recent anime selfies are being published on Twitter [@RicoBeti](https://twitter.
 ![Preview](pms.png)
 
 
+# Development
+![AWS BAdge](https://codebuild.us-east-1.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoiZWJIeXI2TzlGWmx1eEc3dzJicFFEZ0FnZVpUK2U4LzZDeVQ2V0JhZE84bkZKK1BpQiswbG93OXlWUE96dnI1UVJzL3hucCtham43bHQrT3VDN3lmVHdnPSIsIml2UGFyYW1ldGVyU3BlYyI6IlkwbTJscTNWUlBiMEsrWTkiLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=master)
 
-## License
+*(More detailed instructions will follow later)*
+
+*   Install dependencies:
+    ```bash
+    npm install
+    ```
+
+*   Set correct values for environment variables in the `.env` files.
+
+*   Run development server:
+    ```bash
+    npm run serve
+    ```
+    
+*   Alternatively, build the release version:
+    ```bash
+    npm run build
+    ```
+
+
+# License
 
 MIT, see [LICENSE.txt](LICENSE.txt).
-
