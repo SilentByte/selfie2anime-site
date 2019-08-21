@@ -216,13 +216,13 @@
         <section id="portfolio" class="bg-dark">
             <div class="container-fluid p-0">
                 <div class="row no-gutters">
-                    <div v-for="i in 96"
+                    <div v-for="p in portfolio"
                          class="col-lg-1 col-md-2 col-sm-3 col-4">
-                        <a class="portfolio-box" :href="`./img/portfolio/composite/${i}.jpg`">
+                        <a class="portfolio-box" :href="p.composite">
                             <img class="img-fluid mx-auto d-block"
-                                 :src="`./img/portfolio/gan/${i}.jpg`" alt="">
+                                 :src="p.gan" alt="">
                             <div class="portfolio-box-caption">
-                                <img class="img-fluid" :src="`./img/portfolio/original/${i}.jpg`" alt="">
+                                <img class="img-fluid" :src="p.original" alt="">
                             </div>
                         </a>
                     </div>
@@ -303,6 +303,8 @@
 
     import PhotoUploader from "@/components/PhotoUploader.vue";
 
+    import PORTFOLIO_TREE from "@/gen/portfolio-tree.gen.json";
+
     @Component({
         components: {
             PhotoUploader,
@@ -316,6 +318,26 @@
         selfiesPerSecond = 0;
         counterIntervalHandle = 0;
 
+        get portfolio() {
+            // Number of images must be multiple of 12 for proper alignment.
+            const tree = PORTFOLIO_TREE.slice(0, Math.floor(PORTFOLIO_TREE.length / 12) * 12);
+
+            // Shuffle order of portfolio images.
+            for(let i = tree.length - 1; i > 0; i--) {
+                const swapIndex = Math.floor(Math.random() * (i + 1));
+                [tree[i], tree[swapIndex]] = [tree[swapIndex], tree[i]];
+            }
+
+            // Special Case: Move Devs to the end.
+            tree.push(tree.splice(tree.findIndex((p) =>
+                p.original.includes("96c11c716b8ad1b63ccd6f0eba2c2d165b73d00f")), 1)[0]);
+
+            tree.push(tree.splice(tree.findIndex((p) =>
+                p.original.includes("eaa266af5fcba13a347809eaf3f490cb17a9beef")), 1)[0]);
+
+            return tree;
+        }
+
         onUpdateCounter() {
             this.estimateCounter = Math.ceil(
                 this.counter
@@ -327,7 +349,7 @@
         async fetchStats() {
             // TODO: Replace current manually calculated estimates with actual real-time numbers once backend is done.
             this.counter = 18800;
-            this.selfiesPerSecond = 0.452169;
+            this.selfiesPerSecond = 0.049522;
             this.counterTimestamp = 1566299371;
             this.estimateCounter = this.counter;
 

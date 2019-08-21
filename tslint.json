@@ -6,6 +6,7 @@
   "linterOptions": {
     "exclude": [
       "node_modules/**",
+      "src/gen/**",
       "**/*.js"
     ]
   },

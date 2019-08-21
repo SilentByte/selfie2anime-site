@@ -4,5 +4,8 @@
 node_modules/
 dist/
 
+src/gen/*.gen.*
+public/**/*.gen.*
+
 .env.local
 .env.*.local
