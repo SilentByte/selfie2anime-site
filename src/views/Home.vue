@@ -66,7 +66,8 @@
                     Here are a few examples for you to check out.
                 </div>
 
-                <div class="row justify-content-center">
+                <!-- Carousel -->
+                <div class="row justify-content-center m-0">
                     <div class="col col-sm-12 col-md-8 col-lg-6">
                         <div class="card shadow-lg">
                             <div class="card-body p-2">
@@ -129,7 +130,7 @@
             </div>
             <div class="container pt-5 text-center">
                 <hr />
-                <h2 class="my-5 text-primary text-lowercase">
+                <h2 class="my-5 text-primary text-lowercase text-break">
                     <a href="https://twitter.com/intent/tweet?url=https://selfie2anime.com&text=What do YOU look like in Anime?&hashtags=selfie2anime"
                        target="_blank"
                        rel="noopener">
@@ -398,6 +399,10 @@
     section h2, .large-caption {
         font-size: 2.8em;
         line-height: 1.25;
+
+        @media (max-width: 576px) {
+            font-size: 2.0em;
+        }
     }
 
     .nav-item, .page-section h2 {
