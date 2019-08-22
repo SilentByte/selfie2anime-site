@@ -66,4 +66,6 @@ export function init($) {
         });
         return false;
     });
+
+    window.lazyload();
 }
