@@ -25,6 +25,9 @@
                             <a href="#home" class="nav-link js-scroll-trigger">Home</a>
                         </li>
                         <li class="nav-item">
+                            <a href="/blog" target="_blank" class="nav-link">Blog</a>
+                        </li>
+                        <li class="nav-item">
                             <a href="#about" class="nav-link js-scroll-trigger">About</a>
                         </li>
                         <li class="nav-item">
@@ -113,6 +116,8 @@
                     <a href="https://github.com/SilentByte/selfie2anime-site">front-end</a>
                     and the
                     <a href="https://github.com/t04glovern/selfie2anime">back-end</a>.
+                    Head over to <a href="/blog">our blog</a> where we discuss the technical aspects
+                    of this website.
                 </div>
 
                 <div class="mt-5">
@@ -283,11 +288,15 @@
         <footer class="bg-light py-5">
             <div class="container">
                 <div class="small text-center text-muted">
-                    <a href="https://selfie2anime.com/terms" target="_blank">
+                    <a href="/blog" target="_blank">
+                        Blog
+                    </a>
+                    &bull;
+                    <a href="/terms" target="_blank">
                         Terms of Service
                     </a>
                     &bull;
-                    <a href="https://selfie2anime.com/privacy" target="_blank">
+                    <a href="/privacy" target="_blank">
                         Privacy Statement
                     </a>
                 </div>
@@ -356,7 +365,7 @@
         }
 
         async fetchStats() {
-            // TODO: Replace current manually calculated estimates with actual real-time numbers once backend is done.
+            // TODO: Replace current manually calculated estimates with actual real-time numbers once back-end is done.
             this.counter = 78000;
             this.selfiesPerSecond = 0.258781;
             this.counterTimestamp = 1566563523;

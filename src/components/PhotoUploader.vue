@@ -94,11 +94,11 @@
                             <div class="col col-10 text-muted text-center" style="line-height: 1.5em">
                                 <small>
                                     By using our service, you are agreeing to the
-                                    <a href="https://selfie2anime.com/terms" target="_blank">
+                                    <a href="/terms" target="_blank">
                                         Terms&nbsp;of&nbsp;Service
                                     </a>
                                     and
-                                    <a href="https://selfie2anime.com/privacy" target="_blank">
+                                    <a href="/privacy" target="_blank">
                                         Privacy&nbsp;Statement.
                                     </a>
                                 </small>
