@@ -113,10 +113,10 @@
                     Be sure to <a href="#contact" class="js-scroll-trigger">follow us on social media</a>
                     for further updates! If you are interested in how this works, we have made the source code
                     available on Github for both the
-                    <a href="https://github.com/SilentByte/selfie2anime-site">front-end</a>
+                    <a href="https://github.com/SilentByte/selfie2anime-site" target="_blank">front-end</a>
                     and the
-                    <a href="https://github.com/t04glovern/selfie2anime">back-end</a>.
-                    Head over to <a href="/blog">our blog</a> where we discuss the technical aspects
+                    <a href="https://github.com/t04glovern/selfie2anime" target="_blank">back-end</a>.
+                    Head over to <a href="/blog" target="_blank">our blog</a> where we discuss the technical aspects
                     of this website.
                 </div>
 
