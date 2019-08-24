@@ -258,27 +258,22 @@
                         <hr class="divider my-4">
                         <p class="text-muted mb-5">
                             Follow us on Twitter and Github to find out what other
-                            projects we're working on or drop us an email if you
-                            have any questions!
+                            projects we're working and feel free to drop us a message
+                            if you have any questions!
                         </p>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
+                <div class="row text-center">
+                    <div class="col-12 col-sm-6">
                         <i style="color: #38a1f3" class="fa fa-twitter fa-5x mb-3"></i>
                         <a class="d-block" href="https://twitter.com/RicoBeti">@RicoBeti</a>
                         <a class="d-block" href="https://twitter.com/nathangloverAUS">@nathangloverAUS</a>
                     </div>
 
-                    <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
+                    <div class="col-12 col-sm-6">
                         <i style="color: #211f1f" class="fa fa-github fa-5x mb-3"></i>
                         <a class="d-block" href="https://github.com/SilentByte">@SilentByte</a>
                         <a class="d-block" href="https://github.com/t04glovern">@t04glovern</a>
-                    </div>
-
-                    <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
-                        <i style="color: #f06292" class="fa fa-envelope fa-5x mb-3"></i>
-                        <a class="d-block" href="mailto:info@selfie2anime.com">info@selfie2anime.com</a>
                     </div>
                 </div>
             </div>
