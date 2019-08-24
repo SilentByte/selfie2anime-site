@@ -5,7 +5,8 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "dev": "vue-cli-service serve",
-    "build": "node build-portfolio.js && vue-cli-service build",
+    "build": "npm run build-blog && node build-portfolio.js && vue-cli-service build && cp -R blog/.deploy/dist dist/blog",
+    "build-blog": "git submodule update --recursive --remote && (cd blog; ./s2a.sh build)",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
