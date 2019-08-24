@@ -42,6 +42,11 @@ Recent anime selfies are being published on Twitter [@RicoBeti](https://twitter.
     ```bash
     npm install
     ```
+    
+*   Pull submodules (the blog):
+    ```bash
+    git submodule update --init --recursive
+    ```
 
 *   Set correct values for environment variables in the `.env` files.
 
@@ -54,6 +59,10 @@ Recent anime selfies are being published on Twitter [@RicoBeti](https://twitter.
     ```bash
     npm run build
     ```
+    
+    Building a release version may take a long time due to generation of the portfolio and due to image optimizations being performed. In case the portfolio has not changed, set `DISABLE_PORTFOLIO_BUILD=1` to suppress regeneration of the images.
+    
+    For development and testing, set `DISABLE_IMAGE_OPTIMIZATION=1` to avoid wasting time on image compression.
 
 
 # License
