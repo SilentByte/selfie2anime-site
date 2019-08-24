@@ -266,14 +266,14 @@
                 <div class="row text-center">
                     <div class="col-12 col-sm-6">
                         <i style="color: #38a1f3" class="fa fa-twitter fa-5x mb-3"></i>
-                        <a class="d-block" href="https://twitter.com/RicoBeti">@RicoBeti</a>
-                        <a class="d-block" href="https://twitter.com/nathangloverAUS">@nathangloverAUS</a>
+                        <a class="d-block" href="https://twitter.com/RicoBeti" target="_blank">@RicoBeti</a>
+                        <a class="d-block" href="https://twitter.com/nathangloverAUS" target="_blank">@nathangloverAUS</a>
                     </div>
 
                     <div class="col-12 col-sm-6">
                         <i style="color: #211f1f" class="fa fa-github fa-5x mb-3"></i>
-                        <a class="d-block" href="https://github.com/SilentByte">@SilentByte</a>
-                        <a class="d-block" href="https://github.com/t04glovern">@t04glovern</a>
+                        <a class="d-block" href="https://github.com/SilentByte" target="_blank">@SilentByte</a>
+                        <a class="d-block" href="https://github.com/t04glovern" target="_blank">@t04glovern</a>
                     </div>
                 </div>
             </div>
