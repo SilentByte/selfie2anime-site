@@ -70,11 +70,13 @@ async function generate() {
                 .getBufferAsync(Jimp.MIME_JPEG),
         ]);
 
-        [compositeBuffer, originalBuffer, ganBuffer] = await Promise.all([
-            guetzli({quality: QUALITY})(compositeBuffer),
-            guetzli({quality: QUALITY})(originalBuffer),
-            guetzli({quality: QUALITY})(ganBuffer),
-        ]);
+        if(!process.env.DISABLE_IMAGE_OPTIMIZATION) {
+            [compositeBuffer, originalBuffer, ganBuffer] = await Promise.all([
+                guetzli({quality: QUALITY})(compositeBuffer),
+                guetzli({quality: QUALITY})(originalBuffer),
+                guetzli({quality: QUALITY})(ganBuffer),
+            ]);
+        }
 
         const originalSha1 = sha1(originalBuffer);
         const ganSha1 = sha1(ganBuffer);
