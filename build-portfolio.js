@@ -105,6 +105,10 @@ async function generate() {
     await fs.writeFile(PORTFOLIO_TREE_DST_DIR, JSON.stringify(portfolioTree, null, 4));
 }
 
-generate().then(() => {
-    console.log("DONE");
-});
+if(process.env.DISABLE_PORTFOLIO_BUILD) {
+    console.log("SKIPPING PORTFOLIO BUILD");
+} else {
+    generate().then(() => {
+        console.log("DONE");
+    });
+}
