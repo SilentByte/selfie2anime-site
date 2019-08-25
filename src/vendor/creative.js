@@ -60,11 +60,7 @@ export function init($) {
             event_category: "outbound",
             event_label: url,
             transport_type: "beacon",
-            event_callback: function() {
-                window.open(url);
-            },
         });
-        return false;
     });
 
     window.lazyload();
