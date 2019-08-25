@@ -54,14 +54,5 @@ export function init($) {
         },
     });
 
-    $("a[target='_blank']").click(function() {
-        const url = $(this).attr("href");
-        gtag("event", "click", {
-            event_category: "outbound",
-            event_label: url,
-            transport_type: "beacon",
-        });
-    });
-
     window.lazyload();
 }
