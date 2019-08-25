@@ -129,6 +129,15 @@
                     <div class="text-primary text-uppercase mt-4">selfies &amp; counting</div>
                 </div>
 
+                <div class="mt-4">
+                    <a href="https://www.producthunt.com/posts/selfie2anime?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-selfie2anime"
+                       target="_blank">
+                        <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=164770&theme=light"
+                             alt="Selfie2Anime - Ever wondered what you'd look like as an Anime character? | Product Hunt Embed"
+                             style="width: 250px; height: 54px;" width="250px" height="54px" />
+                    </a>
+                </div>
+
                 <div class="my-5 text-muted" style="line-height: 2em">
                     The GAN we are using is based on original work by Junho Kim, Minjae Kim, Hyeonwoo Kang, and
                     Kwanghee Lee. Their repository is <a href="https://github.com/taki0112/UGATIT">available here</a>.
@@ -267,7 +276,8 @@
                     <div class="col-12 col-sm-6">
                         <i style="color: #38a1f3" class="fa fa-twitter fa-5x mb-3"></i>
                         <a class="d-block" href="https://twitter.com/RicoBeti" target="_blank">@RicoBeti</a>
-                        <a class="d-block" href="https://twitter.com/nathangloverAUS" target="_blank">@nathangloverAUS</a>
+                        <a class="d-block" href="https://twitter.com/nathangloverAUS"
+                           target="_blank">@nathangloverAUS</a>
                     </div>
 
                     <div class="col-12 col-sm-6">

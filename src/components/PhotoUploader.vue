@@ -134,10 +134,19 @@
                             <span class="text-primary font-weight-bold">All Done!</span>
                             <span class="text-nowrap"> (づ｡◕‿‿◕｡)づ</span>
                         </div>
-                        <div class="mt-4 mb-5 pt-2" style="font-size: 1.2em; line-height: 1.8em">
+                        <div class="mt-4 mb-4 pt-2" style="font-size: 1.2em; line-height: 1.8em">
                             We've started processing your selfie and will send the result to
                             <span class="text-primary font-weight-bold">{{ email }}</span>
                             as soon as it's available!
+
+                            <div class="mt-3">
+                                <a href="https://www.producthunt.com/posts/selfie2anime?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-selfie2anime"
+                                   target="_blank">
+                                    <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=164770&theme=light"
+                                         alt="Selfie2Anime - Ever wondered what you'd look like as an Anime character? | Product Hunt Embed"
+                                         style="width: 250px; height: 54px;" width="250px" height="54px" />
+                                </a>
+                            </div>
 
                             <!--
                             <div class="alert alert-info mt-3 small" role="alert">
@@ -148,7 +157,7 @@
                         </div>
 
                         <a href="/"
-                           class="btn btn-primary btn-lg p-3 text-uppercase"
+                           class="btn btn-primary p-3 text-uppercase"
                            role="button"
                            aria-pressed="true">
                             Upload another one!
