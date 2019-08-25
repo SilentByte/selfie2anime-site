@@ -25,7 +25,7 @@
                             <a href="#home" class="nav-link js-scroll-trigger">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a href="/blog" target="_blank" class="nav-link">Blog</a>
+                            <a href="/blog" class="nav-link">Blog</a>
                         </li>
                         <li class="nav-item">
                             <a href="#about" class="nav-link js-scroll-trigger">About</a>
