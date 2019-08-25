@@ -123,7 +123,7 @@
                 <div class="mt-5">
                     <div class="large-caption text-primary">
                         <div class="spinner-grow" style="width: 0.5em; height: 0.5em; margin-bottom: 0.25em;"></div>
-                        {{ estimateCounter }}
+                        {{ estimateCounter.toLocaleString() }}
                         <div class="spinner-grow" style="width: 0.5em; height: 0.5em; margin-bottom: 0.25em;"></div>
                     </div>
                     <div class="text-primary text-uppercase mt-4">selfies &amp; counting</div>
