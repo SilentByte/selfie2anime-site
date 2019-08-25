@@ -242,7 +242,7 @@
 
         <!-- Portfolio Section -->
         <section id="portfolio" class="bg-dark">
-            <div class="container-fluid p-0">
+            <div class="container-fluid portfolio-container p-0">
                 <div class="row no-gutters">
                     <div v-for="p in portfolio"
                          class="col-lg-1 col-md-2 col-sm-3 col-4">
@@ -473,7 +473,7 @@
     }
 
     #portfolio .container-fluid {
-        max-width: 12 * 256px;
+        max-width: 12 * 160px;
     }
 
     .portfolio-box-caption {
