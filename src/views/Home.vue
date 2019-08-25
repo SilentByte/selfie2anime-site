@@ -195,6 +195,17 @@
                         </a>
                     </div>
                     <div class="col-12 col-sm-12 col-md-12 offset-md-0 col-lg-6">
+                        <iframe src="https://cards.producthunt.com/cards/posts/164770?v=1"
+                                allowfullscreen
+                                style="border: none;"
+                                width="100%"
+                                height="500"
+                                frameborder="0"
+                                scrolling="no">
+                        </iframe>
+                    </div>
+                    <!--
+                    <div class="col-12 col-sm-12 col-md-12 offset-md-0 col-lg-6">
                         <a class="twitter-timeline"
                            data-theme="light"
                            data-link-color="#f06292"
@@ -205,6 +216,7 @@
                             Selfie2Anime Tweets by @RicoBeti
                         </a>
                     </div>
+                    -->
                 </div>
             </div>
         </section>
