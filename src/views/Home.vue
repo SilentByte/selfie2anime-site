@@ -25,7 +25,7 @@
                             <a href="#home" class="nav-link js-scroll-trigger">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a href="/blog" class="nav-link">Blog</a>
+                            <a href="/blog/" class="nav-link">Blog</a>
                         </li>
                         <li class="nav-item">
                             <a href="#about" class="nav-link js-scroll-trigger">About</a>
@@ -309,11 +309,11 @@
                         Blog
                     </a>
                     &bull;
-                    <a href="/terms" target="_blank">
+                    <a href="/terms/" target="_blank">
                         Terms of Service
                     </a>
                     &bull;
-                    <a href="/privacy" target="_blank">
+                    <a href="/privacy/" target="_blank">
                         Privacy Statement
                     </a>
                 </div>
