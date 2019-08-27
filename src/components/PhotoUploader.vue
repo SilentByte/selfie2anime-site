@@ -21,10 +21,18 @@
                             What do <span class="text-primary font-weight-bold">YOU</span>
                             look like in <span class="text-primary font-weight-bold">anime</span>?
                         </h1>
-                        <i class="fa fa-cloud-upload fa-5x my-4 text-primary"></i>
+                        <i class="fa fa-cloud-upload fa-5x mt-4 mb-2 text-primary"></i>
                         <span class="d-block mb-4 text-primary">
                             Upload a Selfie
                         </span>
+
+                        <div role="alert"
+                             class="alert alert-info mt-3 mx-5 small"
+                             style="font-size: 11pt">
+                            <strong>Heads up!</strong> Due to extremely high demand, we are
+                            currently unable to send e-mails. ಥ_ಥ You can still upload your selfie now and
+                            it'll be processed as soon as possible.
+                        </div>
 
                         <span class="text-muted"
                               style="font-size: 11pt;">
@@ -135,9 +143,17 @@
                             <span class="text-nowrap"> (づ｡◕‿‿◕｡)づ</span>
                         </div>
                         <div class="mt-4 mb-4 pt-2" style="font-size: 1.2em; line-height: 1.8em">
+                            <!--
                             We've started processing your selfie and will send the result to
                             <span class="text-primary font-weight-bold">{{ email }}</span>
                             as soon as it's available!
+                            -->
+
+                            <div class="alert alert-info mt-3 small" role="alert">
+                                <strong>Heads up!</strong> Due to extremely high demand, we are
+                                currently unable to send e-mails. ಥ_ಥ Please be patient while we are processing your
+                                request.
+                            </div>
 
                             <div class="mt-3">
                                 <a href="https://www.producthunt.com/posts/selfie2anime?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-selfie2anime"
@@ -147,13 +163,6 @@
                                          style="width: 250px; height: 54px;" width="250px" height="54px" />
                                 </a>
                             </div>
-
-                            <!--
-                            <div class="alert alert-info mt-3 small" role="alert">
-                                <strong>Heads up!</strong> Many people are creating anime selfies at the moment.
-                                Please be patient while we are processing your request!
-                            </div>
-                            -->
                         </div>
 
                         <a href="/"
