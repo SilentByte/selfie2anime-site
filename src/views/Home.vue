@@ -116,7 +116,7 @@
                     <a href="https://github.com/SilentByte/selfie2anime-site" target="_blank">front-end</a>
                     and the
                     <a href="https://github.com/t04glovern/selfie2anime" target="_blank">back-end</a>.
-                    Head over to <a href="/blog" target="_blank">our blog</a> where we discuss the technical aspects
+                    Head over to <a href="/blog/">our blog</a> where we discuss the technical aspects
                     of this website.
                 </div>
 
@@ -305,7 +305,7 @@
         <footer class="bg-light py-5">
             <div class="container">
                 <div class="small text-center text-muted">
-                    <a href="/blog" target="_blank">
+                    <a href="/blog/">
                         Blog
                     </a>
                     &bull;
