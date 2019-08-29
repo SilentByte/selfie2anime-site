@@ -133,6 +133,15 @@
                         </div>
 
                         <div class="my-3">
+                            <a ref="provider"
+                               href="http://deloplen.com/afu.php?zoneid=2792497"
+                               target="_blank">
+                                Sponsored Content: Click to help us out! UwU
+                            </a>
+                        </div>
+
+                        <!--
+                        <div class="my-3">
                             <a ref="jlist"
                                :href="banner.href"
                                target="_blank">
@@ -144,12 +153,13 @@
                                      height="90">
                             </a>
                         </div>
+                        -->
 
                         <a href="/"
                            class="btn btn-primary btn-lg p-3 text-uppercase"
                            role="button"
                            aria-pressed="true"
-                           @click="$refs.jlist.click()">
+                           @click="$refs.provider.click()">
                             Try Again!
                         </a>
                     </div>
@@ -173,7 +183,16 @@
                         </div>
 
                         <div class="my-3">
-                            <a ref="jlist"
+                            <a ref="provider"
+                               href="http://deloplen.com/afu.php?zoneid=2792497"
+                               target="_blank">
+                                Sponsored Content: Click to help us out! UwU
+                            </a>
+                        </div>
+
+                        <!--
+                        <div class="my-3">
+                            <a ref="provider"
                                :href="banner.href"
                                target="_blank">
                                 <img :src="banner.src"
@@ -184,12 +203,13 @@
                                      height="90">
                             </a>
                         </div>
+                        -->
 
                         <a href="/"
                            class="btn btn-primary p-3 text-uppercase"
                            role="button"
                            aria-pressed="true"
-                           @click="$refs.jlist.click()">
+                           @click="$refs.provider.click()">
                             Upload another one!
                         </a>
                     </div>
@@ -260,6 +280,7 @@
         submitted = false;
         hasUploadError = false;
 
+        /*
         banners = [
             {
                 href: "https://www.jlist.com/category/doujin-and-touhou/music?acc=1722&___store=jlist&bannerid=64",
@@ -286,6 +307,7 @@
         get banner() {
             return this.banners[Math.floor(Math.random() * this.banners.length)];
         }
+         */
 
         get canSubmit() {
             return /\S+@\S+\.\S+/.test(this.email) && !this.submitted;
