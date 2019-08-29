@@ -383,9 +383,9 @@
 
         async fetchStats() {
             // TODO: Replace current manually calculated estimates with actual real-time numbers once back-end is done.
-            this.counter = 222780;
-            this.selfiesPerSecond = 0.458723;
-            this.counterTimestamp = 1566910489;
+            this.counter = 381358;
+            this.selfiesPerSecond = 1.523658;
+            this.counterTimestamp = 1567071937;
             this.estimateCounter = this.counter;
 
             if(this.counterIntervalHandle) {
