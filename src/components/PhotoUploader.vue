@@ -118,7 +118,7 @@
                 </div>
             </div>
             <div v-show="step === 'done'" class="col-sm">
-                <div class="text-center m-5 pt-5 pb-4">
+                <div class="text-center m-3 pt-5 pb-4 mx-1">
                     <div v-if="hasUploadError">
                         <div style="font-size: 2em; line-height: 1.8em">
                             <span class="text-primary font-weight-bold">
@@ -126,16 +126,30 @@
                             </span>
                             <span class="text-nowrap"> ಥ_ಥ</span>
                         </div>
-                        <div class="mt-4 mb-5 pt-2" style="font-size: 1.2em; line-height: 1.8em">
+                        <div class="mt-4 mb-5 pt-2">
                             Something has gone <span class="text-primary font-weight-bold">terribly wrong</span>!
                             <br />
                             Please try uploading your selfie again.
                         </div>
 
+                        <div class="my-3">
+                            <a ref="jlist"
+                               :href="banner.href"
+                               target="_blank">
+                                <img :src="banner.src"
+                                     style="max-width: 100%"
+                                     alt="More Anime Stuff!"
+                                     title="More Anime Stuff!"
+                                     width="728"
+                                     height="90">
+                            </a>
+                        </div>
+
                         <a href="/"
                            class="btn btn-primary btn-lg p-3 text-uppercase"
                            role="button"
-                           aria-pressed="true">
+                           aria-pressed="true"
+                           @click="$refs.jlist.click()">
                             Try Again!
                         </a>
                     </div>
@@ -144,7 +158,7 @@
                             <span class="text-primary font-weight-bold">All Done!</span>
                             <span class="text-nowrap"> (づ｡◕‿‿◕｡)づ</span>
                         </div>
-                        <div class="mt-4 mb-4 pt-2" style="font-size: 1.2em; line-height: 1.8em">
+                        <div class="mt-4 mb-4 pt-2 mx-1">
                             We've started processing your selfie and will send the result to
                             <span class="text-primary font-weight-bold">{{ email }}</span>
                             as soon as it's available!
@@ -156,21 +170,26 @@
                                 request.
                             </div>
                             -->
+                        </div>
 
-                            <div class="mt-3">
-                                <a href="https://www.producthunt.com/posts/selfie2anime?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-selfie2anime"
-                                   target="_blank">
-                                    <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=164770&theme=light"
-                                         alt="Selfie2Anime - Ever wondered what you'd look like as an Anime character? | Product Hunt Embed"
-                                         style="width: 250px; height: 54px;" width="250px" height="54px" />
-                                </a>
-                            </div>
+                        <div class="my-3">
+                            <a ref="jlist"
+                               :href="banner.href"
+                               target="_blank">
+                                <img :src="banner.src"
+                                     style="max-width: 100%"
+                                     alt="More Anime Stuff!"
+                                     title="More Anime Stuff!"
+                                     width="728"
+                                     height="90">
+                            </a>
                         </div>
 
                         <a href="/"
                            class="btn btn-primary p-3 text-uppercase"
                            role="button"
-                           aria-pressed="true">
+                           aria-pressed="true"
+                           @click="$refs.jlist.click()">
                             Upload another one!
                         </a>
                     </div>
@@ -240,6 +259,33 @@
         progress = 0;
         submitted = false;
         hasUploadError = false;
+
+        banners = [
+            {
+                href: "https://www.jlist.com/category/doujin-and-touhou/music?acc=1722&___store=jlist&bannerid=64",
+                src: "/banners/cd.jpg",
+            },
+            {
+                href: "https://www.jbox.com/series/touhou-project?acc=1722&___store=jlist&bannerid=57",
+                src: "/banners/touhou.jpg",
+            },
+            {
+                href: "https://jlist.com/jast011?acc=1722&___store=jlist&bannerid=18",
+                src: "/banners/seinarukana.jpg",
+            },
+            {
+                href: "https://jlist.com/jast012?acc=1722&___store=jlist&bannerid=17",
+                src: "/banners/sonico.jpg",
+            },
+            {
+                href: "https://jbox.com/series/kantai-collection?acc=1722&___store=jlist&bannerid=61",
+                src: "/banners/kantai.jpg",
+            },
+        ];
+
+        get banner() {
+            return this.banners[Math.floor(Math.random() * this.banners.length)];
+        }
 
         get canSubmit() {
             return /\S+@\S+\.\S+/.test(this.email) && !this.submitted;
