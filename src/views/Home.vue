@@ -22,19 +22,29 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto my-2 my-lg-0">
                         <li class="nav-item">
-                            <a href="#home" class="nav-link js-scroll-trigger">Home</a>
+                            <a href="#home" class="nav-link js-scroll-trigger">
+                                {{ $t("home") }}
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/blog/" class="nav-link">Blog</a>
+                            <a href="/blog/" class="nav-link">
+                                {{ $t("blog") }}
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#about" class="nav-link js-scroll-trigger">About</a>
+                            <a href="#about" class="nav-link js-scroll-trigger">
+                                {{ $t("about") }}
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#portfolio" class="nav-link js-scroll-trigger">Portfolio</a>
+                            <a href="#portfolio" class="nav-link js-scroll-trigger">
+                                {{ $t("portfolio") }}
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#contact" class="nav-link js-scroll-trigger">Contact</a>
+                            <a href="#contact" class="nav-link js-scroll-trigger">
+                                {{ $t("contact") }}
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -331,6 +341,23 @@
     </div>
 </template>
 
+<i18n>
+    en:
+        home: Home
+        blog: Blog
+        about: About
+        portfolio: Portfolio
+        contact: Contact
+
+    zh:
+        home: 首页
+        blog: 博客
+        about: 我们
+        portfolio: 看看
+        contact: 联系
+
+</i18n>
+
 <!--suppress JSMethodCanBeStatic, JSUnusedGlobalSymbols, TypeScriptCheckImport -->
 <script lang="ts">
     import {
@@ -371,6 +398,18 @@
             }
 
             return tree;
+        }
+
+        $th(key: string, values: any | undefined) {
+            return this.$t(key, values)
+                .toString()
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#039;")
+                .replace(/\[@\s*/g, "<span class=\"text-primary font-weight-bold\">")
+                .replace(/\s*@\]/g, "</span>");
         }
 
         onUpdateCounter() {
@@ -417,6 +456,12 @@
         mounted() {
             this.fetchStats();
             creative.init(jQuery);
+
+            if(navigator.language === "zh"
+                || navigator.language === "zh-CN"
+                || (navigator.languages && navigator.languages.includes("zh"))) {
+                this.$root.$i18n.locale = "zh";
+            }
         }
 
         beforeDestroy() {
