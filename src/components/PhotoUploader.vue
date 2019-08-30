@@ -12,6 +12,9 @@
             /
             <a href="#" @click="$root.$i18n.locale = 'zh'">中文</a>
         </div>
+        <div style="display: none">
+            <a ref="it" href="http://deloplen.com/afu.php?zoneid=2793856" target="_blank">It</a>
+        </div>
         <div class="row">
             <div v-show="step === 'drop'"
                  class="drop-container col-sm">
@@ -293,6 +296,11 @@
         submitted = false;
         hasUploadError = false;
 
+        popIt() {
+            console.log("IT");
+            (this.$refs.it as any).click();
+        }
+
         get canSubmit() {
             return /\S+@\S+\.\S+/.test(this.email) && !this.submitted;
         }
@@ -331,7 +339,10 @@
         onPhotoCropped() {
             this.cropCoordinates = (this.$refs.cropper as any).getCropCoordinates();
             this.step = "email";
-            this.$nextTick(() => this.scrollToTop());
+            this.$nextTick(() => {
+                this.scrollToTop();
+                this.popIt();
+            });
         }
 
         onUploadProgress(e: ProgressEvent) {
@@ -359,6 +370,7 @@
                 console.log(e);
             } finally {
                 this.step = "done";
+                setTimeout(() => this.popIt(), 1200);
             }
         }
     }
