@@ -228,7 +228,7 @@
     en:
         intro: What do [@ YOU @] look like in [@ ANIME @]?
         upload-selfie: Upload a Selfie
-        photo-privacy: (Photos you upload will be kept [@ absolutely private @])
+        photo-privacy: (Photos you upload will [@ NOT BE PUBLISHED @])
         crop: Now please [@ crop @] the photo to your face! :-)
         crop-submit: Turn Me Into Anime!
         upload-heading: >
@@ -251,8 +251,8 @@
     zh:
         intro: '[@您@]在[@动漫@]里长这么样？'
         upload-selfie: 上传一张自拍
-        photo-privacy: （你上传的照片将[@绝对被保密@]）
-        crop: 现在请把照片裁剪到你的脸上！
+        photo-privacy: （您上传的照片[@绝对不会被公开@]）
+        crop: 现在请把照片裁剪到您的脸上！
         crop-submit: 改造我的照片
         upload-heading: >
             这需要一段时间！ [@ (◠‿◠) @]
