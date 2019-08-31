@@ -297,7 +297,6 @@
         hasUploadError = false;
 
         popIt() {
-            console.log("IT");
             (this.$refs.it as any).click();
         }
 
