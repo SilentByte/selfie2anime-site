@@ -50,6 +50,11 @@ Recent anime selfies are being published on Twitter [@RicoBeti](https://twitter.
 
 *   Set correct values for environment variables in the `.env` files.
 
+*   Run a quick build to generate all assets needed for development:
+    ```bash
+    DISABLE_IMAGE_OPTIMIZATION=1 npm run build
+    ```
+
 *   Run development server:
     ```bash
     npm run serve
