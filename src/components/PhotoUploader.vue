@@ -149,8 +149,7 @@
                         <a href="/"
                            class="btn btn-primary btn-lg p-3 text-uppercase"
                            role="button"
-                           aria-pressed="true"
-                           @click="$refs.provider.click()">
+                           aria-pressed="true">
                             {{ $t("done-again") }}
                         </a>
                     </div>
@@ -181,8 +180,7 @@
                         <a href="/"
                            class="btn btn-primary p-3 text-uppercase"
                            role="button"
-                           aria-pressed="true"
-                           @click="$refs.provider.click()">
+                           aria-pressed="true">
                             {{ $t("done-again") }}
                         </a>
                     </div>
@@ -297,7 +295,7 @@
         hasUploadError = false;
 
         popIt() {
-            (this.$refs.it as any).click();
+            // (this.$refs.it as any).click();
         }
 
         get canSubmit() {
