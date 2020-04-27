@@ -12,6 +12,15 @@
             /
             <a href="#" @click="$root.$i18n.locale = 'zh'">中文</a>
         </div>
+        <div style="height: 200px !important">
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-9169830803956537"
+                data-ad-slot="4855067513"
+                data-ad-format="auto"
+                data-full-width-responsive="true">
+            </ins>
+        </div>
         <div style="display: none">
             <a ref="it" href="http://deloplen.com/afu.php?zoneid=2793856" target="_blank">It</a>
         </div>
@@ -42,6 +51,14 @@
                             it'll be processed as soon as possible.
                         </div>
                         -->
+
+                        <!-- <ins class="adsbygoogle"
+                            style="display:block"
+                            data-ad-client="ca-pub-9169830803956537"
+                            data-ad-slot="4855067513"
+                            data-ad-format="auto"
+                            data-full-width-responsive="true">
+                        </ins> -->
 
                         <span class="text-muted"
                               style="font-size: 11pt;"
@@ -78,6 +95,18 @@
                                 </div>
                             </div>
                         </div>
+
+                        <!-- <div class="form-row mb-4 align-items-center justify-content-center"
+                             style="display: block; min-height: 80px">
+                            <ins class="adsbygoogle"
+                                style="display:block"
+                                data-ad-client="ca-pub-9169830803956537"
+                                data-ad-slot="4346681492"
+                                data-ad-format="auto"
+                                data-full-width-responsive="true">
+                            </ins>
+                        </div> -->
+
                         <div class="form-row justify-content-center text-center">
                             <div class="col-12 mb-2 col-md-8">
                                 <input required
@@ -270,6 +299,8 @@
 
 <!--suppress JSMethodCanBeStatic, JSUnusedGlobalSymbols, -->
 <script lang="ts">
+    declare let adsbygoogle: any;
+
     import {
         Component,
         Vue,
@@ -369,6 +400,10 @@
                 this.step = "done";
                 setTimeout(() => this.popIt(), 1200);
             }
+        }
+
+        mounted() {
+            (adsbygoogle = (window as any).adsbygoogle || []).push({});
         }
     }
 </script>
