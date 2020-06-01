@@ -367,7 +367,6 @@
         Vue,
     } from "vue-property-decorator";
 
-    import axios from "axios";
     import * as creative from "@/vendor/creative";
 
     import PhotoUploader from "@/components/PhotoUploader.vue";
@@ -435,24 +434,6 @@
 
             this.onUpdateCounter();
             this.counterIntervalHandle = window.setInterval(this.onUpdateCounter, 4000);
-
-            // try {
-            //     const response = await axios.get(process.env.VUE_APP_API_COUNT_URL);
-            //     this.counter = parseInt(response.data["count"]);
-            //     this.selfiesPerSecond = parseFloat(response.data["sps"]);
-            //     this.counterTimestamp = Date.now();
-            //     this.estimateCounter = this.counter;
-            //
-            //     if(this.counterIntervalHandle) {
-            //         clearInterval(this.counterIntervalHandle);
-            //     }
-            //
-            //     this.onUpdateCounter();
-            //     this.counterIntervalHandle = setInterval(this.onUpdateCounter, 4000);
-            // } catch(e) {
-            //     // tslint:disable-next-line
-            //     console.log(e);
-            // }
         }
 
         mounted() {
