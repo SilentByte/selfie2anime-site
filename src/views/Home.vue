@@ -331,7 +331,7 @@
                 <hr />
 
                 <div class="small text-center text-muted">
-                    Copyright &copy; 2019 by
+                    Copyright &copy; 2019-{{ new Date().getFullYear() }} by
                     <a href="https://twitter.com/RicoBeti">Rico Beti</a>
                     &amp;
                     <a href="https://twitter.com/nathangloverAUS">Nathan Glover</a>
@@ -341,6 +341,7 @@
     </div>
 </template>
 
+<-- @formatter:off -->
 <i18n>
     en:
         home: Home
@@ -357,6 +358,7 @@
         contact: 联系
 
 </i18n>
+<-- @formatter:on -->
 
 <!--suppress JSMethodCanBeStatic, JSUnusedGlobalSymbols, TypeScriptCheckImport -->
 <script lang="ts">
