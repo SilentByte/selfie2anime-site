@@ -14,11 +14,11 @@
         </div>
         <div style="height: 200px !important">
             <ins class="adsbygoogle"
-                style="display:block"
-                data-ad-client="ca-pub-9169830803956537"
-                data-ad-slot="4855067513"
-                data-ad-format="auto"
-                data-full-width-responsive="true">
+                 style="display:block"
+                 data-ad-client="ca-pub-9169830803956537"
+                 data-ad-slot="4855067513"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true">
             </ins>
         </div>
         <div style="display: none">
@@ -254,6 +254,7 @@
     </div>
 </template>
 
+<-- @formatter:off -->
 <i18n>
     en:
         intro: What do [@ YOU @] look like in [@ ANIME @]?
@@ -296,6 +297,7 @@
         done-again: 上传另一张照片
         done-error: 出了点问题！ 请尝试重新上传自拍。
 </i18n>
+<-- @formatter:on -->
 
 <!--suppress JSMethodCanBeStatic, JSUnusedGlobalSymbols, -->
 <script lang="ts">
@@ -357,7 +359,7 @@
                     this.step = "crop";
                 }, {
                     canvas: true,
-                    orientation: true,
+                    orientation: false,
                     maxWidth: 3840,
                     maxHeight: 3840,
                 },
