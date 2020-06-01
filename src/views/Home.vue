@@ -467,6 +467,11 @@
         }
     }
 
+    .masthead {
+        height: auto;
+        padding-bottom: 40px;
+    }
+
     .nav-item, .page-section h2 {
         text-transform: uppercase;
     }
