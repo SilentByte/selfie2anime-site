@@ -11,7 +11,7 @@
     "i18n:report": "vue-cli-service i18n:report --src './src/**/*.?(js|vue)' --locales './src/locales/**/*.json'"
   },
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "blueimp-load-image": "^2.23.0",
     "core-js": "^2.6.5",
     "croppr": "^2.3.1",
